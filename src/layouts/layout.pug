@@ -38,17 +38,14 @@ html(class='page  no-js', lang='ru')
     .page__inner
       .page__content
 
-        +page-header()
-          block header
+        block header
 
-        main.main-content
+        main.page-main
           block content
-            p содержимое
 
       .page__footer-wrapper
-        +page-footer()
-          block footer
+        block footer
 
     block bottom
-      script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquerKy.min.js")
+      script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
       script(src="scripts/script.min.js")
