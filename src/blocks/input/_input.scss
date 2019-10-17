@@ -1,0 +1,14 @@
+.input{
+  @include field-text;
+  @include placeholder{
+    color: $white;
+  }
+
+  &--icon-left-xl{
+    padding-left: 80px;
+  }
+
+  &--icon-left-xxl{
+    padding-left: 90px;
+  }
+}

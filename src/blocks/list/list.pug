@@ -1,0 +1,44 @@
+//- Все примеси в этом файле должны начинаться c имени блока (list)
+//- ВАЖНО! Файл содержит 2 миксина
+
+mixin list(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +list()
+          +list-item()
+
+  -
+
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' list--' + modsList[i].trim();
+      }
+    }
+
+  ul.list(class=allMods)&attributes(attributes)
+    block
+
+
+
+mixin list-item(mods)
+
+  //- Принимает:
+  //-   mods   {string} - список модификаторов
+
+  -
+
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' list__item--' + modsList[i].trim();
+      }
+    }
+
+  li.list__item(class=allMods)&attributes(attributes)
+    block

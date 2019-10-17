@@ -1,0 +1,40 @@
+.link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+
+  &:not(.link--no-hover):hover,
+  &:not(.link--no-hover):focus{
+    color: $color-pink;
+  }
+
+  //модификаторы
+  &--underline {
+    text-decoration: underline;
+  }
+
+  &--icon{
+    position: relative;
+    &:after{
+      @include pseudo;
+      top: 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--icon-left{
+    padding-left: 45px;
+    &:after{
+      left: 0;
+    }
+  }
+
+  &--clip{
+    &:after{
+      width: 30px;
+      height: 28px;
+      background-image: url('#{$imageDir}clip.svg');
+    }
+  }
+}

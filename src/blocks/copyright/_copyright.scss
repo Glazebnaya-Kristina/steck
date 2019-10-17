@@ -1,0 +1,49 @@
+.copyright {
+  padding: 40px 0 50px;
+  color: $color-darken-grey;
+  background-color: $white;
+  @media (min-width: $screen-md) {
+    padding: 45px 0 45px;
+  }
+
+  &__content{
+    @include container;
+    display: grid;
+    justify-items: center;
+    @media (min-width: $screen-md) {
+      grid-template-columns: repeat(3, auto);
+      align-items: center;
+      grid-column-gap: 35px;
+    }
+    @media (min-width: $screen-xl) {
+      grid-template-columns: 1fr 2fr 1fr;
+      justify-items: start;
+      grid-column-gap: 0;
+    }
+  }
+
+  &__info{
+    margin: 0;
+    margin-top: 30px;
+    max-width: 290px;
+    text-align: center;
+    @media (min-width: $screen-md) {
+      margin: 0;
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+
+  &__company{
+    margin-left: 5px;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  &__link{
+    margin-top: 20px;
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
+  }
+}

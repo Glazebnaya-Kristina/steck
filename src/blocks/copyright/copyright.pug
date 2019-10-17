@@ -1,0 +1,27 @@
+//- Все примеси в этом файле должны начинаться c имени блока (copyright)
+
+mixin copyright(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +copyright()
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + 'copyright--' + modsList[i].trim();
+      }
+    }
+
+  section.copyright(class=allMods)&attributes(attributes)
+    .copyright__content
+      +logo('#', 'black')
+        img(class='copyright__img', src='images/logo-black.svg', alt='Логотип Senurable')
+      p.copyright__info
+        | Copyright 2019 (с)
+        b.copyright__company Senurable Web Factory. Все права защищены
+      +link('Политика конфиденциальности', '#', 'underline').copyright__link

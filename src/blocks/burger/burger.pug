@@ -1,0 +1,15 @@
+//- Все примеси в этом файле должны начинаться c имени блока (burger)
+
+mixin burger(label)
+
+  //- Принимает:
+  //-   label {string} - описание, значение атрибута aria-label
+
+  //- Вызов:
+        +burger('Показать пример кода')
+
+  -
+    label = label || 'Toggle block ' + targetId
+
+  button.burger(aria-label=label)&attributes(attributes)
+    span= label

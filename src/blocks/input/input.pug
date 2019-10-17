@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (input)
+
+mixin input(mods, isTextarea)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +input()
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' input--' + modsList[i].trim();
+      }
+    }
+
+  if (typeof (isTextarea) !== 'undefined' && isTextarea)
+    textarea.input(class=allMods)&attributes(attributes)
+
+  else
+    input.input(class=allMods)&attributes(attributes)

@@ -1,0 +1,54 @@
+//- Все примеси в этом файле должны начинаться c имени блока (social)
+
+mixin social(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' social--' + modsList[i].trim();
+      }
+    }
+
+  ul.social(class=allMods)&attributes(attributes)
+    block
+
+
+mixin social-item(text, href, mods)
+
+  //- Принимает:
+  //-   text   {string} - содержимое пункта
+  //-   href   {string} - ссылка этого пункта (если пустая, то это не ссылка, а span)
+  //-   mods   {string} - список модификаторов
+
+  //- Вызов:
+    +social()
+      +social-item('Главная', '/home')
+      +social-item('Услуги', '/services')
+      +social-item('Стриптиз')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + 'social__item--' + modsList[i].trim();
+      }
+    }
+
+  li.social__item(class=allMods)&attributes(attributes)
+    a.social__link(href=href, target='_blank', rel='nofollow noreferrer')
+      span.social__name!= text
+      block
+
+
+mixin social-icon(width, height, viewBox, iconName, mods)
+
+  svg.social__icon(width=width, height=height, viewBox=viewBox)
+    use(xlink:href='icons/sprite.svg#icon-' + iconName)
