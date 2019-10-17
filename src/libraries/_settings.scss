@@ -7,19 +7,84 @@
 // Сделаем viewport великим снова! (привет, IE10) http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
 @at-root {
 
-  @-ms-viewport {
-    width: device-width;
-  }
+  //@-ms-viewport {
+  //  width: device-width;
+  //}
+}
+
+
+ @font-face {
+   font-family: 'AvenirNext';
+   src: url('#{$fontDir}avenir-next/AvenirNextCyr-Thin.woff2') format('woff2'),
+        url('#{$fontDir}avenir-next/AvenirNextCyr-Thin.woff') format('woff');
+   font-weight: 100;
+   font-style: normal;
+   font-display: swap;
+ }
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('#{$fontDir}avenir-next/AvenirNextCyr-UltraLight.woff2') format('woff2'),
+  url('#{$fontDir}avenir-next/AvenirNextCyr-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Lato';
-  src: url('#{$fontDir}lato/lato-regular.woff2') format('woff2'),
-  url('#{$fontDir}Lato/lato-regular.woff') format('woff');
+  font-family: 'AvenirNext';
+  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Light.woff2') format('woff2'),
+  url('#{$fontDir}avenir-next/AvenirNextCyr-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Regular.woff2') format('woff2'),
+  url('#{$fontDir}avenir-next/AvenirNextCyr-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Medium.woff2') format('woff2'),
+  url('#{$fontDir}avenir-next/AvenirNextCyr-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Demi.woff2') format('woff2'),
+  url('#{$fontDir}avenir-next/AvenirNextCyr-Demi.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Bold.woff2') format('woff2'),
+  url('#{$fontDir}avenir-next/AvenirNextCyr-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Heavy.woff2') format('woff2'),
+  url('#{$fontDir}avenir-next/AvenirNextCyr-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 .page {
   box-sizing: border-box;
@@ -94,16 +159,17 @@ label,
 select,
 textarea {
   touch-action: manipulation; // Стилевая коррекция 300ms задержки (для поддерживающих браузеров)
-  margin: 0;  // Убираем margin в Firefox и Safari
-  font: inherit;
-  color: inherit;
+  margin: 0;                  // Убираем margin в Firefox и Safari
+}
+
+button{
+  cursor: pointer;
 }
 
 button,
 input {
   overflow: visible;    // Покажем торчащее в Edge
   text-transform: none; // Уберём наследование text transform в Firefox
-  color: inherit;
 }
 
 button,
@@ -111,7 +177,6 @@ html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; // Коррекция проблем стилизации для Safari
-  font: inherit;
 }
 
 button::-moz-focus-inner,
@@ -159,7 +224,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $link-color--hover;
+    //color: $link-color--hover;
   }
 
   // &:visited {
@@ -182,10 +247,12 @@ hr {
   box-sizing: content-box; // Проблема Firefox
   height: 0;               // Проблема Firefox
   overflow: visible;       // Проблема Edge и IE
+  border: none;
   margin-top: $typo-margin-vertical * 2;
   margin-bottom: $typo-margin-vertical * 2;
   border: 0;
-  border-top: 1px solid $border-color;
+  //border-top: 1px solid $border-color;
+  border-top: 1px solid;
 }
 
 h1,
@@ -220,16 +287,6 @@ address,
 figure {
   margin-top: 0;
   margin-bottom: $typo-margin-vertical;
-}
-
-p {
-  // http://clagnut.com/blog/2395
-  hyphens: auto;
-  hyphenate-limit-chars: 6 3 3;
-  hyphenate-limit-lines: 2;
-  hyphenate-limit-last: always;
-  hyphenate-limit-zone: 8%;
-  margin: 0;
 }
 
 address {

@@ -1,15 +1,16 @@
 // В этом файле должны быть стили для БЭМ-блока field-text, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .field-text {
 
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: $typo-margin-vertical;
+  //margin-bottom: $typo-margin-vertical;
 
   &__name {
-    @include field-name;
+    @include hide-text;
   }
 
   &__input-wrap {
@@ -45,6 +46,24 @@
     #{$block-name}__input {
       border-color: $color-danger;
       background-color: lighten($color-danger, 35%);
+    }
+  }
+
+  &--icon{
+    .field-text__input-wrap{
+      position: relative;
+      &:after{
+        @include pseudo;
+        top: 10px;
+        left: 15px;
+        width: 40px;
+        height: 30px;
+        background-image: url('#{$imageDir}astronaut2.svg');
+        background-repeat: no-repeat;
+      }
+    }
+    .field-text__input{
+      padding-left: 90px;
     }
   }
 }

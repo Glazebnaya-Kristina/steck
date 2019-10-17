@@ -1,5 +1,6 @@
 // В этом файле должны быть стили для БЭМ-блока form, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .form {
 
@@ -26,5 +27,88 @@
     line-height: $line-height;
     white-space: normal; // Привет IE
     color: currentColor;
+  }
+
+  &__name{
+    @include hide-text;
+  }
+
+  &__input-wrap{
+    display: block;
+  }
+
+  &__label{
+    display: block;
+
+    &--icon{
+      position: relative;
+      &:after{
+        @include pseudo;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+      }
+      &:before{
+        @include pseudo;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 63px;
+        width: 1px;
+        height: 25px;
+        background-color: $white;
+      }
+    }
+
+    &--astronaut{
+      &:after{
+        width: 40px;
+        height: 30px;
+        background-image: url('#{$imageDir}astronaut2.svg');
+        @media (min-width: $screen-xl) {
+          left: 2px;
+        }
+      }
+      &:before{
+        @include pseudo;
+        left: 70px;
+        @media (min-width: $screen-xl) {
+          left: 63px;
+        }
+      }
+    }
+
+    &--rocket{
+      &:after{
+        width: 30px;
+        height: 12px;
+        background-image: url('#{$imageDir}rocket2.svg');
+      }
+    }
+
+    &--telescope{
+      &:after{
+        top: 23px;
+        transform: none;
+        width: 20px;
+        height: 25px;
+        background-image: url('#{$imageDir}telescope.svg');
+        @media (min-width: $screen-md) {
+          top: 15px;
+        }
+      }
+      &:before{
+        @include pseudo;
+        top: 23px;
+        transform: none;
+        left: 63px;
+        width: 1px;
+        height: 25px;
+        background-color: $white;
+        @media (min-width: $screen-md) {
+          top: 15px;
+        }
+      }
+    }
   }
 }

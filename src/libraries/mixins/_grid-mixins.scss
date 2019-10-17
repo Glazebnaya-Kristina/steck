@@ -47,6 +47,15 @@ $grid-gutter-width:           30px !default;
     }
   }
 
+  @media (min-width: $screen-md-small) {
+    width: $container-md-small;
+
+    @if ($md-grid-gutter != $sm-grid-gutter) {
+      padding-left: ($md-grid-gutter / 2);
+      padding-right: ($md-grid-gutter / 2);
+    }
+  }
+
   @media (min-width: $screen-md) {
     width: $container-md;
 
@@ -74,14 +83,14 @@ $grid-gutter-width:           30px !default;
     }
   }
 
-  @media (min-width: $screen-xxl) {
-    width: $container-xxl;
-
-    @if ($xxl-grid-gutter != $xl-grid-gutter) {
-      padding-left: ($xxl-grid-gutter / 2);
-      padding-right: ($xxl-grid-gutter / 2);
-    }
-  }
+  //@media (min-width: $screen-xxl) {
+  //  width: $container-xxl;
+  //
+  //  @if ($xxl-grid-gutter != $xl-grid-gutter) {
+  //    padding-left: ($xxl-grid-gutter / 2);
+  //    padding-right: ($xxl-grid-gutter / 2);
+  //  }
+  //}
 }
 
 

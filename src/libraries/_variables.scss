@@ -22,24 +22,35 @@ $color-fb:                    #4267b2;
 $color-tw:                    #40A2F5;
 $color-gh:                    #24292e;
 
+$color-pink:                  #E84A61;
+$color-dark-grey:             #333333;
+$color-darken-grey:           #444444;
+$color-darker-grey:           #555555;
+$color-light-grey:            #777777;
+$color-lighten-grey:          #999999;
+$color-lightest-grey:         #E0E0E0;
+
 
 
 // Семантические цвета
 
-$text-color:                  $gray-darkest;
+$text-color:                  $color-light-grey;
 $text-color-muted:            $gray;
 $body-bg:                     $white;
+$section-bg:                  #f9f9f9;
 
-$link-color:                  $color-main;
-$link-color--hover:           darken($color-main, 15%);
+$link-color:                  inherit;
+//$link-color--hover:           darken($color-main, 15%);
 
-$border-color:                $gray-lighten;
+//$border-color:                $gray-lighten;
 
 
 
 // Базовая типографика
 
-$font-size:                   16px;
+$font-size:                   14px;
+$font-size-title-xs:          21px;
+$font-size-title-md:          42px;
 
 $font-size-h1:                40px;
 $font-size-h2:                32px;
@@ -54,9 +65,8 @@ $line-height:                 1.5;
 
 $typo-margin-vertical:        1em;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family:                'AvenirNext', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-// Georgia, Times New Roman, Times, serif
 
 
 
@@ -64,16 +74,20 @@ $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation
 
 $screen-xs:                   0;
 $screen-sm:                   480px;
+$screen-md-small:             576px;
 $screen-md:                   768px;
 $screen-lg:                   992px;
 $screen-xl:                   1200px;
+$screen-xll:                  1400px;
 $screen-xxl:                  1800px;
 
 $container-sm:                100%;
-$container-md:                100%;
-$container-lg:                $screen-lg - 30;
-$container-xl:                $screen-xl - 30;
-$container-xxl:               $screen-xxl - 30;
+$container-md-small:          480px;
+$container-md:                660px;
+$container-lg:                $screen-lg;
+$container-xl:                $screen-xl;
+$container-xll:               $screen-xll;
+$container-xxl:               $screen-xxl;
 
 
 
@@ -86,8 +100,8 @@ $grid-gutter-width:           30px;
 
 // Разное
 
-$field-padding-vertical:      5px;
-$field-padding-horizontal:    12px;
+$field-padding-vertical:      15px;
+$field-padding-horizontal:    15px;
 
 $border-radius:               3px;
 $opacity:                     0.7;
@@ -95,8 +109,8 @@ $transition-time:             0.3s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
 $menu-desktop-width:          $screen-lg;
-$toggler-part-height:         3px;
-$toggler-part-bg-color:       #000;
+$toggler-part-height:         2px;
+$toggler-part-bg-color:       $white;
 
 $z-index-modal:               100;
 
@@ -107,3 +121,4 @@ $z-index-modal:               100;
 $imageDir:                    '../images/';
 $fontDir:                     '../fonts/';
 $videoDir:                    '../videos/';
+

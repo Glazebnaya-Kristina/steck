@@ -4,6 +4,7 @@ mixin page-header(mods)
 
   //- Принимает:
   //-   mods  {string} - список модификаторов
+
   //- Вызов:
         +page-header()
           p «Шапка»
@@ -17,6 +18,17 @@ mixin page-header(mods)
       }
     }
 
-  header.page-header(class=allMods, role='banner')&attributes(attributes)
+  header.page-header(class=allMods)&attributes(attributes)
     .page-header__inner
-      block
+      .page-header__top
+        +logo('#', 'white')
+          img(class='page-header__img', src='images/logo.svg', alt='Логотип Senurable')
+        //+social().page-header__social
+        //  +social-item('Фейсбук', '#', 'hexagon')
+        //    +social-icon('16', '16', '0 0 16 16', 'facebook')
+        //  +social-item('Вконтакте', '#', 'hexagon')
+        //    +social-icon('20', '13', '0 0 30 20', 'vk')
+        //  +social-item('Linkedin', '#', 'hexagon')
+        //    +social-icon('13', '13', '0 0 20 20', 'in')
+        //  +social-item('Behance', '#', 'hexagon')
+        //    +social-icon('18', '15', '', 'be')

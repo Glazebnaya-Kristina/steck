@@ -2,5 +2,14 @@
 @import "../../layouts/layout.scss";
 
 // Стили блоков
+@import "../../blocks/logo/logo.scss";
+@import "../../blocks/social/social.scss";
+@import "../../blocks/title/title.scss";
+@import "../../blocks/form/form.scss";
+@import "../../blocks/field-text/field-text.scss";
+@import "../../blocks/link/link.scss";
+@import "../../blocks/copyright/copyright.scss";
+@import "../../blocks/input/input.scss";
+@import "../../blocks/list/list.scss";
 @import "../../sections/page-header/page-header.scss";
 @import "../../sections/page-footer/page-footer.scss";

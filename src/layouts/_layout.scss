@@ -1,8 +1,12 @@
 // Стили библиотеки
 @import "../libraries/variables.scss";
-@import "../libraries/print.scss";
 @import "../libraries/mixins.scss";
+@import "../libraries/print.scss";
 
 // Глобальные стили
 @import "../libraries/settings.scss";
 @import "../libraries/animations.scss";
+
+// Стили блоков
+@import "../blocks/button/button.scss";
+@import "../blocks/burger/burger.scss";

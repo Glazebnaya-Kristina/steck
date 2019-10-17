@@ -20,5 +20,10 @@ mixin logo(href, mods)
       }
     }
 
-  a.logo(class=allMods, href=href)&attributes(attributes)
-    block
+  if(attributes.href)
+    a.logo(class=allMods, href=href)&attributes(attributes)
+      block
+
+  else
+    span.logo(class=allMods)&attributes(attributes)
+      block
