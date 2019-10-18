@@ -1,0 +1,28 @@
+//- Все примеси в этом файле должны начинаться c имени блока (banking-services)
+
+mixin banking-services(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' banking-services--' + modsList[i].trim();
+      }
+    }
+
+  section.banking-services(class=allMods)&attributes(attributes)
+    .banking-services__inner
+      +title('Bankacılık. Tamamen yenilenmiş.')
+      +subtitle('Şübesiz. Ücretsiz. Kolay.').banking-services__subtitle
+      +form('middle').banking-services__form
+        +label('Еmail').banking-services__label
+          +input()(type='email')
+        +button('Erken Erişim', 'violet')(type='button').banking-services__button
