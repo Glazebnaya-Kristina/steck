@@ -30,58 +30,59 @@ $grid-gutter-width:           30px !default;
 ) {
   display: block;
   width: 100%;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 
-  @if ($xs-grid-gutter != 0) {
-    padding-left: ($xs-grid-gutter / 2);
-    padding-right: ($xs-grid-gutter / 2);
-  }
-
-  @media (min-width: $screen-sm) {
-    width: $container-sm;
-
-    @if ($sm-grid-gutter != $xs-grid-gutter) {
-      padding-left: ($sm-grid-gutter / 2);
-      padding-right: ($sm-grid-gutter / 2);
-    }
-  }
-
-  @media (min-width: $screen-md-small) {
-    width: $container-md-small;
-
-    @if ($md-grid-gutter != $sm-grid-gutter) {
-      padding-left: ($md-grid-gutter / 2);
-      padding-right: ($md-grid-gutter / 2);
-    }
-  }
-
-  @media (min-width: $screen-md) {
-    width: $container-md;
-
-    @if ($md-grid-gutter != $sm-grid-gutter) {
-      padding-left: ($md-grid-gutter / 2);
-      padding-right: ($md-grid-gutter / 2);
-    }
-  }
-
-  @media (min-width: $screen-lg) {
-    width: $container-lg;
-
-    @if ($lg-grid-gutter != $md-grid-gutter) {
-      padding-left: ($lg-grid-gutter / 2);
-      padding-right: ($lg-grid-gutter / 2);
-    }
-  }
-
-  @media (min-width: $screen-xl) {
-    width: $container-xl;
-
-    @if ($xl-grid-gutter != $lg-grid-gutter) {
-      padding-left: ($xl-grid-gutter / 2);
-      padding-right: ($xl-grid-gutter / 2);
-    }
-  }
+  //@if ($xs-grid-gutter != 0) {
+  //  padding-left: ($xs-grid-gutter / 2);
+  //  padding-right: ($xs-grid-gutter / 2);
+  //}
+  //
+  //@media (min-width: $screen-sm) {
+  //  width: $container-sm;
+  //
+  //  @if ($sm-grid-gutter != $xs-grid-gutter) {
+  //    padding-left: ($sm-grid-gutter / 2);
+  //    padding-right: ($sm-grid-gutter / 2);
+  //  }
+  //}
+  //
+  //@media (min-width: $screen-md-small) {
+  //  width: $container-md-small;
+  //
+  //  @if ($md-grid-gutter != $sm-grid-gutter) {
+  //    padding-left: ($md-grid-gutter / 2);
+  //    padding-right: ($md-grid-gutter / 2);
+  //  }
+  //}
+  //
+  //@media (min-width: $screen-md) {
+  //  width: $container-md;
+  //
+  //  @if ($md-grid-gutter != $sm-grid-gutter) {
+  //    padding-left: ($md-grid-gutter / 2);
+  //    padding-right: ($md-grid-gutter / 2);
+  //  }
+  //}
+  //
+  //@media (min-width: $screen-lg) {
+  //  width: $container-lg;
+  //
+  //  @if ($lg-grid-gutter != $md-grid-gutter) {
+  //    padding-left: ($lg-grid-gutter / 2);
+  //    padding-right: ($lg-grid-gutter / 2);
+  //  }
+  //}
+  //
+  //@media (min-width: $screen-xl) {
+  //  width: $container-xl;
+  //
+  //  @if ($xl-grid-gutter != $lg-grid-gutter) {
+  //    padding-left: ($xl-grid-gutter / 2);
+  //    padding-right: ($xl-grid-gutter / 2);
+  //  }
+  //}
 
   //@media (min-width: $screen-xxl) {
   //  width: $container-xxl;
@@ -91,7 +92,68 @@ $grid-gutter-width:           30px !default;
   //    padding-right: ($xxl-grid-gutter / 2);
   //  }
   //}
+
+
+
+  @if ($xs-grid-gutter != 0) {
+    padding-left: ($xs-grid-gutter / 2);
+    padding-right: ($xs-grid-gutter / 2);
+  }
+
+  @media (max-width: $screen-xl) {
+    width: $container-lg;
+
+    @if ($xl-grid-gutter != $lg-grid-gutter) {
+      padding-left: ($xl-grid-gutter / 2);
+      padding-right: ($xl-grid-gutter / 2);
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    width: $container-md;
+
+    @if ($lg-grid-gutter != $md-grid-gutter) {
+      padding-left: ($lg-grid-gutter / 2);
+      padding-right: ($lg-grid-gutter / 2);
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    width: $container-md;
+
+    @if ($md-grid-gutter != $sm-grid-gutter) {
+      padding-left: ($md-grid-gutter / 2);
+      padding-right: ($md-grid-gutter / 2);
+    }
+  }
+
+  @media (max-width: $screen-md-small) {
+    width: $container-md-small;
+
+    @if ($md-grid-gutter != $sm-grid-gutter) {
+      padding-left: ($md-grid-gutter / 2);
+      padding-right: ($md-grid-gutter / 2);
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    width: $container-sm;
+
+    @if ($sm-grid-gutter != $xs-grid-gutter) {
+      padding-left: ($sm-grid-gutter / 2);
+      padding-right: ($sm-grid-gutter / 2);
+    }
+  }
+
+
+
+
+
 }
+
+
+
+
 
 
 
