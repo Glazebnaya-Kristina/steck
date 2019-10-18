@@ -1,0 +1,6 @@
+.label {
+  width: 100%;
+  &__name {
+    @include hide-text;
+  }
+}

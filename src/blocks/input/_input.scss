@@ -1,14 +1,28 @@
 .input{
-  @include field-text;
-  @include placeholder{
-    color: $white;
+  width: 100%;
+  padding: 12px 25px;
+  font: inherit;
+  background-color: #f3f4f5;
+  border-radius: 50px;
+  border: none;
+  transition: $transition-time;
+
+  &:focus{
+    outline: 0;
+    background-color: #e3e4e5;
   }
 
-  &--icon-left-xl{
-    padding-left: 80px;
-  }
 
-  &--icon-left-xxl{
-    padding-left: 90px;
-  }
+//  @include field-text;
+//  @include placeholder{
+//    color: $white;
+//  }
+//
+//  &--icon-left-xl{
+//    padding-left: 80px;
+//  }
+//
+//  &--icon-left-xxl{
+//    padding-left: 90px;
+//  }
 }

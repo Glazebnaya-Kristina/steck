@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (banking-services)
+
+mixin label(name, mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' label--' + modsList[i].trim();
+      }
+    }
+
+  label.label(class=allMods)&attributes(attributes)
+    span.label__name!= name
+    block
