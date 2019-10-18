@@ -12,75 +12,29 @@
   //}
 }
 
-
- @font-face {
-   font-family: 'AvenirNext';
-   src: url('#{$fontDir}avenir-next/AvenirNextCyr-Thin.woff2') format('woff2'),
-        url('#{$fontDir}avenir-next/AvenirNextCyr-Thin.woff') format('woff');
-   font-weight: 100;
-   font-style: normal;
-   font-display: swap;
- }
-
 @font-face {
-  font-family: 'AvenirNext';
-  src: url('#{$fontDir}avenir-next/AvenirNextCyr-UltraLight.woff2') format('woff2'),
-  url('#{$fontDir}avenir-next/AvenirNextCyr-UltraLight.woff') format('woff');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'AvenirNext';
-  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Light.woff2') format('woff2'),
-  url('#{$fontDir}avenir-next/AvenirNextCyr-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'AvenirNext';
-  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Regular.woff2') format('woff2'),
-  url('#{$fontDir}avenir-next/AvenirNextCyr-Regular.woff') format('woff');
+  font-family: 'Mark';
+  src: url('#{$fontDir}Mark/Mark-Regular.woff2') format('woff2'),
+  url('#{$fontDir}Mark/Mark-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'AvenirNext';
-  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Medium.woff2') format('woff2'),
-  url('#{$fontDir}avenir-next/AvenirNextCyr-Medium.woff') format('woff');
+  font-family: 'Mark';
+  src: url('#{$fontDir}Mark/Mark-Medium.woff2') format('woff2'),
+  url('#{$fontDir}Mark/Mark-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'AvenirNext';
-  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Demi.woff2') format('woff2'),
-  url('#{$fontDir}avenir-next/AvenirNextCyr-Demi.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'AvenirNext';
-  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Bold.woff2') format('woff2'),
-  url('#{$fontDir}avenir-next/AvenirNextCyr-Bold.woff') format('woff');
+  font-family: 'Mark';
+  src: url('#{$fontDir}Mark/Mark-Bold.woff2') format('woff2'),
+  url('#{$fontDir}Mark/Mark-Bold.woff') format('woff');
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'AvenirNext';
-  src: url('#{$fontDir}avenir-next/AvenirNextCyr-Heavy.woff2') format('woff2'),
-  url('#{$fontDir}avenir-next/AvenirNextCyr-Heavy.woff') format('woff');
-  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -128,11 +82,15 @@ body {
   font-size: $font-size;
   line-height: $line-height;
   text-align: left;
-  color: $text-color;
+  color: $color-gray-light;
   background-color: $body-bg;
 
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: $screen-md) {
+    font-size: $font-size-small;
+  }
 }
 
 [tabindex='-1']:focus {
