@@ -5,13 +5,23 @@ extends ../../layouts/layout.pug
 include ../../blocks/logo/logo.pug
 include ../../blocks/social/social.pug
 include ../../blocks/title/title.pug
+include ../../blocks/subtitle/subtitle.pug
 include ../../blocks/form/form.pug
 include ../../blocks/field-text/field-text.pug
 include ../../blocks/link/link.pug
 include ../../blocks/copyright/copyright.pug
 include ../../blocks/input/input.pug
+include ../../blocks/label/label.pug
 include ../../blocks/list/list.pug
+include ../../blocks/navigation/navigation.pug
+include ../../blocks/slider-card/slider-card.pug
 include ../../sections/page-header/page-header.pug
+include ../../sections/banking-services/banking-services.pug
+include ../../sections/new-generation/new-generation.pug
+include ../../sections/payments/payments.pug
+include ../../sections/security/security.pug
+include ../../sections/advantages/advantages.pug
+include ../../sections/card-selection/card-selection.pug
 include ../../sections/page-footer/page-footer.pug
 
 block meta
@@ -22,6 +32,12 @@ block header
   +page-header()
 
 block content
+  +banking-services()
+  +new-generation()
+  +payments()
+  +security()
+  +advantages()
+  +card-selection()
 
 block footer
   +page-footer()
