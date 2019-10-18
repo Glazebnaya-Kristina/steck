@@ -1,0 +1,39 @@
+.card-selection {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 25px 0;
+
+  @media (max-width: $screen-sm) {
+    padding: 75px 0;
+    height: auto;
+  }
+
+  &__inner {
+    @include container;
+    position: relative;
+    text-align: center;
+  }
+
+  &__text {
+    margin: 0;
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__form {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  &__label {
+    margin-right: 15px;
+  }
+
+  &__button {
+    @media (max-width: $screen-sm) {
+      margin-top: 20px;
+    }
+  }
+}

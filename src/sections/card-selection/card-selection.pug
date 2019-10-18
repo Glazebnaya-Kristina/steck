@@ -1,0 +1,31 @@
+//- Все примеси в этом файле должны начинаться c имени блока (card-selection)
+
+mixin card-selection(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+      if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' card-selection--' + modsList[i].trim();
+      }
+    }
+
+  section.card-selection(class=allMods)&attributes(attributes)
+    .card-selection__inner
+      +title('Her ayrıntıda mükemmellik.')
+      +subtitle('Yaşam tarzınıza uygun.').card-selection__subtitle
+      +slider-card()
+      p.card-selection__text Özel özelliklere sahip özel premium kart.
+      p.card-selection__text Almak için 5 veya daha fazla kişiyi tavsiye edin.
+      +form('middle').card-selection__form
+        +label('Еmail').card-selection__label
+          +input()(type='email')
+        +button('Erken Erişim', 'violet')(type='button').card-selection__button
