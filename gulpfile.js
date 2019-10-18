@@ -139,6 +139,15 @@ function optimizeImages() {
 exports.optimizeImages = optimizeImages;
 
 
+// gif
+function gif() {
+   return src( `${root.src}theme/images/*.gif` )
+      .pipe( dest( path.build.img ) )
+      .pipe( browserSync.stream() );
+}
+exports.gif = gif;
+
+
 // Оптимизация SVG
 function optimizeSvg() {
   return src( `${root.src}theme/images/*.svg` )
@@ -282,14 +291,14 @@ function serve() {
 
 exports.build = series(
     parallel(clearBuildDir),
-    parallel(optimizeImages, optimizeSvg, convertImagesToWebp, generateSvgSprite, copyVideos),
+    parallel(optimizeImages, gif, optimizeSvg, convertImagesToWebp, generateSvgSprite, copyVideos),
     parallel(convertTTFtoWOFF, convertTTFtoWOFF2),
     parallel(compilePug, compileScss, buildJs),
 );
 
 exports.default = series(
     parallel(clearBuildDir),
-    parallel(optimizeImages, optimizeSvg, convertImagesToWebp, generateSvgSprite, copyVideos),
+    parallel(optimizeImages, gif, optimizeSvg, convertImagesToWebp, generateSvgSprite, copyVideos),
     parallel(convertTTFtoWOFF, convertTTFtoWOFF2),
     parallel(compilePug, compileScss, buildJs),
     serve,
