@@ -1,0 +1,49 @@
+//- Все примеси в этом файле должны начинаться c имени блока (advantages)
+
+mixin advantages(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' advantages--' + modsList[i].trim();
+      }
+    }
+
+  section.advantages(class=allMods)&attributes(attributes)
+    .advantages__inner
+      +title('Faydalar').advantages__title
+      ul.advantages__list
+        +advantages-item('atom', 'Anında para transferi', 'Tek bir tıklamayla arkadaşlarınıza ve ailenize ücretsiz para gönderin.')
+        +advantages-item('atom', 'Yerel gibi seyahat et', "Tüm dünyada ücretsiz ATM'den para çekme.")
+        +advantages-item('atom', 'Yurtdışına ücretsiz harcadın', 'Yurt dışına ödeme yaparken gerçek döviz kurunu alın.')
+        +advantages-item('atom', 'Yapay zeka', 'Alımlarınızın otomatik kategorilendirilmesi ve etiketlenmesi.')
+        +advantages-item('atom', 'Akıllı bildirimler', 'Bir satın alma işlemi yaptığınız anda anında bildirim alın.')
+        +advantages-item('atom', 'Kişisel müşteri desteği', 'Beklemek yok. Resmi bir dil yok. İnsan deneyimi.')
+
+mixin advantages-item(iconId, subtitle, text, mods)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' advantages__item--' + modsList[i].trim();
+      }
+    }
+
+
+  li.advantages__item(class=allMods)&attributes(attributes)
+    svg.advantages__icon
+      use(xlink:href='icons/sprite.svg#icon-' + iconId)
+    strong.advantages__subtitle!= subtitle
+    p.advantages__description!= text
