@@ -1,0 +1,33 @@
+//- Все примеси в этом файле должны начинаться c имени блока (slider-card)
+
+mixin slider-card(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' slider-card--' + modsList[i].trim();
+      }
+    }
+
+
+
+  .slider-card(class=allMods)&attributes(attributes)
+    ul.slider-card__list
+      li.slider-card__item
+        img(src="images/card-1.png").slider-card__img
+      li.slider-card__item
+        img(src="images/card-2.png").slider-card__img
+      li.slider-card__item
+        img(src="images/card-3.png").slider-card__img
+      li.slider-card__item
+        img(src="images/card-4.png").slider-card__img
+

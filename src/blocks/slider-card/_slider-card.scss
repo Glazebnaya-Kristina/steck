@@ -1,0 +1,121 @@
+.slider-card {
+  @include ul-reset;
+  margin: 50px 0;
+
+  &__list {
+    @include ul-reset;
+  }
+
+  &__item {
+    height: 350px;
+    @media (max-width: $screen-md-small) {
+      height: 200px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  //&__pagination {
+  //  @include ul-reset;
+  //  display: flex;
+  //  justify-content: center;
+  //}
+
+  //&__pagination-item {
+  //  &:not(:first-child) {
+  //    margin-left: 8px;
+  //  }
+  //}
+
+  //&__pagination-button {
+  //  width: 20px;
+  //  height: 20px;
+  //  background-color: #ccc;
+  //  border: 2px solid #fefefe;
+  //  border-radius: 50%;
+  //  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  //
+  //  &--2 {
+  //    background-color: #f2d5d0;
+  //  }
+  //
+  //  &--3 {
+  //    background-color: #5b5a5a;
+  //  }
+  //
+  //  &--4 {
+  //    background-color: #8d9097;
+  //  }
+  //}
+}
+
+
+// Slider SLICK
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  bottom: -25px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 25px;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
+.slick-dots li button {
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  background: transparent;
+  border: 2px solid #fefefe;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  display: block;
+  cursor: pointer;
+  outline: none;
+  transition: $transition-time;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+#slick-slide-control00{
+  background-color: #fff;
+  border: none;
+}
+
+#slick-slide-control01{
+  background-color: #f2d5d0;
+}
+
+#slick-slide-control02{
+  background-color: #5b5a5a;
+}
+
+#slick-slide-control03{
+  background-color: #8d9097;
+}
