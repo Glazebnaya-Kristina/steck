@@ -1,0 +1,29 @@
+//- Все примеси в этом файле должны начинаться c имени блока (payments)
+
+mixin payments(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' payments--' + modsList[i].trim();
+      }
+    }
+
+  section.payments(class=allMods)&attributes(attributes)
+    .payments__inner
+      +title('Ödemeler. Tek bir tıklamayla.')
+      +subtitle('Üçretsiz. Hızlı. 24/7.')
+      +list('disc').payments__list
+        +list-item('Para gönder')
+        +list-item('Para ister')
+        +list-item('Faturalarını öde')
+        +list-item('Devlet hizmetleri için öde')
