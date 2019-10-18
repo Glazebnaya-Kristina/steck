@@ -1,0 +1,40 @@
+//- Все примеси в этом файле должны начинаться c имени блока (navigation)
+
+mixin navigation(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' navigation--' + modsList[i].trim();
+      }
+    }
+
+  nav.navigation(class=allMods)&attributes(attributes)
+    block
+
+
+
+mixin navigation-item(text, href, mods)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' navigation__item--' + modsList[i].trim();
+      }
+    }
+
+
+  li.navigation__item(class=allMods)&attributes(attributes)
+    +link(text, href)

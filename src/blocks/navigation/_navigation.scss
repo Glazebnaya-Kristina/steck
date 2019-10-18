@@ -1,0 +1,27 @@
+.navigation{
+  display: flex;
+  @media (max-width: $screen-xl) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: $screen-lg) {
+    flex-wrap: wrap;
+  }
+
+  &__list{
+    @include ul-reset;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 100px;
+    @media (max-width: $screen-xl) {
+      margin-left: 0;
+    }
+  }
+
+  &__item{
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
