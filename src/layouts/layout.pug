@@ -31,22 +31,23 @@ html(class='page', lang='ru')
     block head
       link(rel="dns-prefetch" href="//cdnjs.cloudflare.com/")
       link(rel="preconnect" href="//cdnjs.cloudflare.com/")
+      link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css")
       link(rel="stylesheet" href="styles/index.min.css")
 
   body
     noscript У вас отключен JavaScript. Это пугает.
+.page__inner
+  .page__content
 
-    .page__inner
-      .page__content
+    block header
 
-        block header
-
-        main.page-main
-          block content
+    main.page-main
+      block content
 
       .page__footer-wrapper
         block footer
 
     block bottom
       script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+      script(src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js")
       script(src="scripts/script.min.js")
