@@ -1,0 +1,32 @@
+//- Все примеси в этом файле должны начинаться c имени блока (new-generation)
+
+mixin new-generation(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' new-generation--' + modsList[i].trim();
+      }
+    }
+
+  section.new-generation(class=allMods)&attributes(attributes)
+    .new-generation__inner
+      +title('Yeni nesil "ücretsiz"')
+      +subtitle('Talep etmediğimiz ücretler:').new-generation__subtitle
+      +list('disc').new-generation__list
+        +list-item('EFT/Havale').new-generation__item
+        +list-item('ATM para yatırma/çekme').new-generation__item
+        +list-item('Yurtdışında ATM para çekme').new-generation__item
+        +list-item('Döviz kuru ücreti ').new-generation__item
+        +list-item('Hesap ücreti ').new-generation__item
+        +list-item('Fatura ödeme ücreti').new-generation__item
+        +list-item('Hiçbir gizli ücreti').new-generation__item
