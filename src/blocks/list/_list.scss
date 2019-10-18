@@ -1,3 +1,14 @@
 .list{
   @include ul-reset;
+
+  &__item{
+    &:not(:first-child){
+      margin-top: 15px;
+    }
+  }
+
+  &--disc{
+    padding-left: 20px;
+    list-style-type: disc;
+  }
 }
