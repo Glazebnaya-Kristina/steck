@@ -1,0 +1,30 @@
+//- Все примеси в этом файле должны начинаться c имени блока (security)
+
+mixin security(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' security--' + modsList[i].trim();
+      }
+    }
+
+  section.security(class=allMods)&attributes(attributes)
+    .security__inner
+      +title('Güvenlik - kontrol sadece sende')
+      +subtitle('Uygulamayı devre dışı bırak / etkinleştir:')
+      +list('disc').security__list
+        +list-item('Temassız ödemeler')
+        +list-item('Steck kartı')
+        +list-item('ATM işlemleri')
+        +list-item('Manyetik şerit ödemeleri')
+        +list-item('Online ödemeler')
