@@ -19,7 +19,33 @@ mixin page-footer(mods)
 
   footer.page-footer(class=allMods)&attributes(attributes)
     .page-footer__inner
-      section.page-footer__content
+      +navigation()
+        +logo(href='#').page-footer__link-logo
+          svg.page-footer__icon
+            use(xlink:href='icons/sprite.svg#icon-logo')
+        ul.navigation__list.page-footer__list
+          +navigation-item('Şartlar ve koşullar', '#')
+          +navigation-item('Sık sorunlar', '#')
+          +navigation-item('Durumum', '#')
+          +navigation-item('İletişim', '#')
+        +social().page-footer__social
+          +social-item('facebook', '#', 'tw')
+          +social-item('facebook', '#', 'fb')
+          +social-item('facebook', '#', 'ig')
+      section.page-footer__terms
+        p.page-footer__description.
+          Steck şu anda BDDK'ya kayıtlı değil. Steck’e erken erişim sağlamak, Steck’in öncelik listesindeki bir yer için geçerli bir e-posta adresi ile kaydolma olarak tanımlanır. Geçerli bir e-posta adresiyle kaydolan birisini yönlendirdiğinizde, sıradaki noktanızı iyileştirebilirsiniz. Steck’in öncelik listesine erken erişim, Steck’li bir banka hesabının açıldığının veya açılması için onaylanacağının bir kanıtı olarak yapılmamalıdır.
+        p.page-footer__description.
+          Bu web sitesindeki bilgiler genel ürün yönümüzü ve özelliklerimizi ana hatlarıyla belirtir. Bu bilgiler herhangi bir malzeme, kod veya işlevsellik sağlama teklifi, taahhüt, vaat veya yasal bir zorunluluk değildir. Herhangi bir sürümün geliştirilmesi, bırakılması ve zamanlaması tamamen Steck'in takdirindedir.
+        p.page-footer__description.
+          Steck’in öncelik listesine katılan her kişi için 10 TL bonus alabilirsiniz. Potansiyel bir bonus almak, birisinin Steck’in öncelik listesine geçerli bir e-posta adresiyle kaydolması veya yeni kullanıcılar için davet kabul etmesi anlamına geldiği anlamına gelir ve bu bonusun teslimini garanti etmez.
+        p.page-footer__description.
+          Steck Premium kartını almak, Steck’in öncelik listesine geçerli bir e-posta adresiyle katılmak için 5 veya daha fazla kişiyi yönlendirmek olarak tanımlanır.
+        p.page-footer__description.
+          Bonus ve Steck Premium kartın teslimatının, yalnızca ürünün tamamı piyasaya sürüldükten sonra gerçekleşmesi planlanmaktadır, ancak şartlar, miktar, teslimat ve teslimatın zamanlaması önceden bildirilmeksizin değiştirilebilir ve Steck'in takdirine bağlı olarak kalır.
+        p.page-footer__description.
+          Bonus ve premium kart kampanyaları sınırlı bir süre dayanır ve önceden haber verilmeksizin durdurulabilir.
+
 
 
 

@@ -3,7 +3,73 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .page-footer {
+  padding: 50px 0;
+  border-top: 1px solid rgba(215, 222,224,.64);
+  color: #9da1a3;
   &__inner {
     @include container;
+  }
+
+  &__link-logo{
+
+    @media (max-width: $screen-lg) {
+      order: 1;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin: 0 auto;
+    }
+
+
+    &:hover{
+      .page-footer__icon{
+        fill: $color-violet;
+      }
+    }
+  }
+
+  &__icon{
+    width: 100%;
+    height: 40px;
+    transition: $transition-time;
+  }
+
+  &__social{
+    margin-left: auto;
+    @media (max-width: $screen-xl) {
+      margin-left: 0;
+    }
+    @media (max-width: $screen-lg) {
+      order: 2;
+    }
+
+    @media (max-width: $screen-sm) {
+      order: 3;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+
+  &__list{
+    @media (max-width: $screen-lg) {
+      order: 3;
+      margin-top: 15px;
+    }
+    @media (max-width: $screen-sm) {
+      order: 2;
+      justify-content: center;
+    }
+  }
+
+  &__terms{
+    margin-top: 25px;
+  }
+
+  &__description{
+    margin: 0;
+    font-size: 13px;
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
   }
 }
