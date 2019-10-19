@@ -15,10 +15,16 @@
     min-height: 40px;
   }
 
-  //&--grey {
-  //  @media (min-width: $screen-md) {
-  //    width: 190px;
-  //    height: 55px;
-  //  }
-  //}
+  &__icon{
+    fill: $black;
+    width: 100px;
+    height: 40px;
+    transition: $transition-time;
+  }
+
+  &:hover{
+    .logo__icon{
+      fill: $color-violet;
+    }
+  }
 }
