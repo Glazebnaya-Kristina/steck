@@ -1,0 +1,34 @@
+//- Все примеси в этом файле должны начинаться c имени блока (status)
+
+mixin status(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' status--' + modsList[i].trim();
+      }
+    }
+
+  section.status(class=allMods)&attributes(attributes)
+    .status__inner
+      h1.status__title Durumum
+      h2.status__subtitle Sizin yeriniz:
+      strong.status__num #95
+      p.status__description Premium erişim ister misiniz? Arkadaşlarını davet ederek hattı atla. Aşağıdaki linki kullandığınızdan emin olun.
+      +form-email('Linki Kopyala', 'https://test.com')
+      +social().status__list
+        +social-item('Linkedin', '#', 'in', 'color-disc')
+        +social-item('facebook', '#', 'fb', 'color-disc, fb')
+        +social-item('viber', '#', 'viber', 'color-disc')
+        +social-item('email', '#', 'email', 'color-disc')
+      +privilege()
+      p.status__conditions 10 tl for each friend

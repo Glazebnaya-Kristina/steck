@@ -1,0 +1,93 @@
+.status{
+  padding: 50px 0 150px;
+
+  @media (max-width: $screen-sm) {
+    padding-bottom: 100px;
+  }
+
+  &__inner{
+    @include container;
+    position: relative;
+    &:after{
+      @include pseudo;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 460px;
+      background-image: url('#{$imageDir}status1.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width: $screen-lg) {
+        top: -61px;
+        width: 200px;
+        height: 200px;
+      }
+
+      @media (max-width: $screen-sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__title{
+    @include hide-text;
+  }
+
+  &__subtitle{
+    margin: 0;
+    font-weight: 400;
+    color: $black;
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__list{
+    margin-top: 40px;
+
+    .social__icon{
+      fill: $white;
+      width: 45%;
+      height: 100%;
+    }
+    @media (max-width: $screen-md-small) {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+
+  &__num{
+    display: block;
+    margin-top: 25px;
+    font-size: 50px;
+    color: $black;
+    @media (max-width: $screen-sm) {
+      margin-top: 15px;
+      font-size: 30px;
+    }
+  }
+
+  &__description{
+    max-width: 50%;
+    margin: 0;
+    margin-top: 25px;
+    @media (max-width: $screen-lg) {
+      max-width: 100%;
+    }
+    @media (max-width: $screen-sm) {
+      margin-top: 15px;
+    }
+  }
+
+  &__conditions{
+    margin: 0;
+    margin-top: 15px;
+    font-weight: 600;
+    color: $black;
+    @media (max-width: $screen-md-small) {
+      text-align: center;
+    }
+  }
+}
