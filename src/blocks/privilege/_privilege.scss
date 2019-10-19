@@ -13,14 +13,27 @@
     justify-content: center;
     align-items: center;
     min-width: 160px;
-    padding: 25px 15px;
+    padding: 25px 20px;
     border: 2px solid rgba(215,222,224,.64);
     border-radius: 5px;
     &:not(:first-child){
       margin-left: 20px;
       @media (max-width: $screen-md-small) {
         margin-left: 0;
-        margin-top: 15px;
+        margin-top: 20px;
+      }
+    }
+
+    &--special{
+      position: relative;
+      &:after{
+        @include pseudo;
+        content: 'her başvuru için 10 TL';
+        bottom: -27px;
+        font-size: 13px;
+      }
+      @media (max-width: $screen-md-small) {
+        margin-bottom: 15px;
       }
     }
 
@@ -40,7 +53,7 @@
 
   &__description{
     margin: 0;
-    //color: $black;
+    margin-top: 5px;
     color: #7633ff;
   }
 }
