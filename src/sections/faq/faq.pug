@@ -1,0 +1,50 @@
+//- Все примеси в этом файле должны начинаться c имени блока (faq)
+
+mixin faq(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +faq()
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' faq--' + modsList[i].trim();
+      }
+    }
+
+  section.faq(class=allMods)&attributes(attributes)
+    .faq__inner
+      h1.faq__title Sık Sorunlar
+      ul.faq__list
+        li.faq__item
+          h2.faq__question Steck Nedir?
+          p.faq__answer
+            | Steck, tasarıma ve kullanıcı deneyimine büyük önem veren, bankacılık hizmetleri için hiçbir ücret ödemeyen, şubesi olmayan, mobil ve zorlu bir bankadır. Misyonumuz, basit, zarif ve kullanımı kolay hale getirmek için geleneksel bankacılığı bozmak ve tamamen yenilemek.
+        li.faq__item
+          h2.faq__question Öncelikli erişim nedir?
+          p.faq__answer
+            | Steck’in, bankalara yeni bir yol katmak isteyen en ilerici insanları çekmek için oluşturduğu lansman öncesi kampanyası. Amacımız herkesin mümkün olan en kısa sürede gemiye ulaştırılması olsa da, öncelik listesinde daha yüksek olan kişiler ilk önce Steck'e erişecekler. Listeyi taşımak için olabildiğince çok arkadaş davet ettiğinizden emin olun.
+          p.faq__answer
+            | Arkadaşlarını davet ederek, yerini yükseltebilir, tavsiye edilen her arkadaş için 10 TL bonus kazanabilir ve bir Steck Premium kartı kazanabilirsin.
+        li.faq__item
+          h2.faq__question Gerçekten ücretin yok mu?
+          p.faq__answer
+            | Evet. Bunu tamamen dijital iş modelimiz nedeniyle karşılayabiliriz. Şubelerimiz, ATM ağlarımız, eski altyapımız veya karmaşık çağrı merkezlerimiz yok; Ürünümüzü, bize çok para kazandıran en son teknolojiyi kullanarak inşa ediyoruz. Bu nedenle, bu maliyet tasarrufunu şeffaf ücret ödemeden bankacılığa sahip müşterilerimize iletiyoruz.
+        li.faq__item
+          h2.faq__question Steck'in bankacılık lisansı var mı?
+          p.faq__answer
+            | Steck şu anda BDDK'ya kayıtlı değil. Tüm düzenlemelere uyduğumuzdan ve size tam bir koruma sağladığımızdan emin olmak için yerel bir lisanslı bankayla ortak olma sürecindeyiz.
+          p.faq__answer
+            | Bu konuda gelecekteki güncellemeleri almak için e-posta adresinizi Steckapp.com adresinde bıraktığınızdan emin olun :)
+        li.faq__item
+          h2.faq__question Steck, en ilerici tüketicilere finansal hizmetler sağlayan bir teknoloji şirketidir.
+          p.faq__answer
+            | Bankacılık lisansı almayı düşünmüyoruz ya da planlamıyoruz. Bu hizmeti size verebilmek için yerel bankalarla ortaklık yapıyoruz. Bu nedenle, yerel düzenlemelere tam olarak uymaya ve tam korumanızı sağlamaya çalışıyoruz.
+          p.faq__answer
+            | Bu ortaklık henüz kurulmamış olsa da, lisanslı bir banka ile ortaklık yoluyla çalışmayı planlıyor.
+
+

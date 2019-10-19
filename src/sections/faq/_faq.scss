@@ -1,0 +1,65 @@
+.faq {
+  padding: 50px 0 85px;
+
+  @media (max-width: $screen-sm) {
+    padding: 50px 0 85px;
+  }
+
+  &__inner {
+    @include container;
+    position: relative;
+  }
+
+  &__title{
+    margin: 0;
+    font-size: $font-size-h1;
+    font-weight: 400;
+    color: $black;
+    @media (max-width: $screen-sm) {
+      font-size: 28px;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    margin: 0 auto;
+    margin-top: 85px;
+    max-width: 1000px;
+
+    @media (max-width: $screen-xl) {
+      max-width: 800px;
+    }
+
+    @media (max-width: $screen-lg) {
+      margin-top: 50px;
+    }
+
+    @media (max-width: $screen-sm) {
+      margin-top: 30px;
+    }
+  }
+
+  &__item{
+    &:not(:first-child){
+      margin-top: 60px;
+      @media (max-width: $screen-sm) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__question{
+    margin: 0;
+    font-weight: 400;
+    color: $black;
+    @media (max-width: $screen-sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__answer{
+    margin: 0;
+    margin-top: 20px;
+  }
+
+}
