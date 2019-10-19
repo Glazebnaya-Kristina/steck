@@ -83,9 +83,8 @@
 
   &__conditions{
     margin: 0;
-    margin-top: 15px;
-    font-weight: 600;
-    color: $black;
+    margin-top: 10px;
+    font-size: 14px;
     @media (max-width: $screen-md-small) {
       text-align: center;
     }
