@@ -10,10 +10,10 @@
     position: relative;
     &:after{
       @include pseudo;
-      top: 0;
+      top: -85px;
       right: 0;
-      width: 400px;
-      height: 460px;
+      width: 420px;
+      height: 490px;
       background-image: url('#{$imageDir}status1.png');
       background-repeat: no-repeat;
       background-size: contain;
@@ -48,7 +48,7 @@
 
     .social__icon{
       fill: $white;
-      width: 45%;
+      width: 40%;
       height: 100%;
     }
     @media (max-width: $screen-md-small) {
@@ -61,7 +61,7 @@
   &__num{
     display: block;
     margin-top: 25px;
-    font-size: 50px;
+    font-size: 40px;
     color: $black;
     @media (max-width: $screen-sm) {
       margin-top: 15px;
