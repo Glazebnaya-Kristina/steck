@@ -13,7 +13,8 @@
     justify-content: center;
     align-items: center;
     min-width: 160px;
-    padding: 25px 20px;
+    //padding: 25px 20px;
+    padding: 5px 20px 40px;
     border: 2px solid rgba(215,222,224,.64);
     border-radius: 5px;
     &:not(:first-child){
@@ -53,7 +54,7 @@
 
   &__description{
     margin: 0;
-    margin-top: 5px;
+    margin-top: 12px;
     color: #7633ff;
   }
 }
