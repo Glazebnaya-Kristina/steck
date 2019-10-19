@@ -21,5 +21,6 @@ mixin page-header(href, mods)
   header.page-header(class=allMods)&attributes(attributes)
     .page-header__inner
       +logo(href=href)
-        img(class='page-header__img', src='images/logo.svg', alt='Логотип Steck')
+        svg.logo__icon
+          use(xlink:href='icons/sprite.svg#icon-logo')
       h1.page-header__title  Банк Steck
