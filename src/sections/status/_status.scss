@@ -10,7 +10,7 @@
     position: relative;
     &:after{
       @include pseudo;
-      top: -85px;
+      top: 0;
       right: 0;
       width: 420px;
       height: 490px;
@@ -37,6 +37,7 @@
   &__subtitle{
     margin: 0;
     font-weight: 400;
+    font-size: 28px;
     color: $black;
     @media (max-width: $screen-sm) {
       font-size: 22px;
