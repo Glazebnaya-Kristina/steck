@@ -12,17 +12,7 @@
     background-color: #e3e4e5;
   }
 
-
-//  @include field-text;
-//  @include placeholder{
-//    color: $white;
-//  }
-//
-//  &--icon-left-xl{
-//    padding-left: 80px;
-//  }
-//
-//  &--icon-left-xxl{
-//    padding-left: 90px;
-//  }
+  @include placeholder{
+    color: $color-gray-light;
+  }
 }
