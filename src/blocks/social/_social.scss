@@ -29,8 +29,8 @@
     }
 
     &--color-disc {
-      max-width: 60px;
-      height: 60px;
+      max-width: 50px;
+      height: 50px;
       background-color: $color-violet;
       border-radius: 50%;
       transition: $transition-time;
@@ -42,16 +42,18 @@
           fill: #fff !important;
         }
       }
-
-      @media (max-width: $screen-md-small) {
-        max-width: 50px;
-        height: 50px;
-      }
     }
 
     &--fb {
       .social__icon {
-        width: 30% !important;
+        width: 27% !important;
+        height: 100%;
+      }
+    }
+
+    &--wp {
+      .social__icon {
+        width: 50% !important;
         height: 100%;
       }
     }
