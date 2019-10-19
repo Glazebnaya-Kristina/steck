@@ -12,7 +12,7 @@
   padding: $field-padding-vertical $field-padding-horizontal;
   font-family: inherit;
   font-size: $font-size;
-  font-weight: 700;
+  font-weight: 500;
   color: $white;
   text-decoration: none;
   text-transform: none;
@@ -29,15 +29,6 @@
   @media (max-width: $screen-md) {
     font-size: $font-size-small;
   }
-
-  // &:visited {
-  //   color: $text-color;
-  // }
-
-  //&:active,
-  //&:focus {
-  //  @include field-focus;
-  //}
 
   &--disabled,
   &:disabled {

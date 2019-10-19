@@ -1,8 +1,9 @@
+var cardsSectionOffset = $('.card-selection').offset().top;
 var firstScreenHeight = $('.banking-services').outerHeight();
 
 $(window).scroll(function () {
    var scroll = $(this).scrollTop();
-   if (scroll >= firstScreenHeight) {
+   if (scroll >= firstScreenHeight && scroll < cardsSectionOffset) {
       $('.button--fixet').addClass('button--fixet-active')
    }
    else {
