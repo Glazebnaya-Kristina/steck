@@ -50,17 +50,31 @@
   }
 
   // цвета
-
   &--violet{
     background-color: $color-violet;
     &:hover,
     &:focus{
-      //background-color: #6b2ec6;
       opacity: .8;
     }
   }
 
   // уникальные кнопки
+  &--fixet{
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(0px, -9.5rem);
+    transition: transform 0.4s ease 0s, opacity 0.3s ease 0.1s, visibility 0s ease 0.5s;
+  }
+
+  &--fixet-active{
+    z-index: 10;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: transform 0.5s ease 0s, opacity 0.3s ease 0.1s;
+  }
 
   // размеры
 
