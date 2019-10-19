@@ -17,39 +17,6 @@
     height: 100%;
     margin: 0 auto;
   }
-
-  //&__pagination {
-  //  @include ul-reset;
-  //  display: flex;
-  //  justify-content: center;
-  //}
-
-  //&__pagination-item {
-  //  &:not(:first-child) {
-  //    margin-left: 8px;
-  //  }
-  //}
-
-  //&__pagination-button {
-  //  width: 20px;
-  //  height: 20px;
-  //  background-color: #ccc;
-  //  border: 2px solid #fefefe;
-  //  border-radius: 50%;
-  //  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
-  //
-  //  &--2 {
-  //    background-color: #f2d5d0;
-  //  }
-  //
-  //  &--3 {
-  //    background-color: #5b5a5a;
-  //  }
-  //
-  //  &--4 {
-  //    background-color: #8d9097;
-  //  }
-  //}
 }
 
 
@@ -82,13 +49,13 @@
 }
 
 .slick-dots li button {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   font-size: 0;
   line-height: 0;
   color: transparent;
   background: transparent;
-  border: 2px solid #fefefe;
+  border: none;
   border-radius: 50%;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   display: block;
@@ -100,6 +67,7 @@
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   outline: none;
+  border: 2px solid #fefefe;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6);
 }
 
