@@ -2,16 +2,6 @@
   display: flex;
   align-items: center;
   height: 100vh;
-  //padding: 25px 0;
-  //
-  //@media (max-width: $screen-sm) {
-  //  padding: 75px 0;
-  //  height: auto;
-  //}
-  //
-  //@media (max-height: 780px) {
-  //  height: auto;
-  //}
   padding: 220px 0;
 
   @media (max-width: $screen-lg) {
@@ -19,7 +9,7 @@
   }
 
   @media (max-width: $screen-sm) {
-    padding: 75px;
+    padding: 75px 0 0;
     height: auto;
   }
 
