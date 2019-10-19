@@ -2,16 +2,31 @@
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 25px 0;
+  //padding: 25px 0;
+  //
+  //@media (max-width: $screen-sm) {
+  //  padding: 75px 0;
+  //  height: auto;
+  //}
+  //
+  //@media (max-height: 780px) {
+  //  height: auto;
+  //}
+  padding: 220px 0;
+
+  @media (max-width: $screen-lg) {
+    padding: 100px 0 0;
+  }
 
   @media (max-width: $screen-sm) {
-    padding: 75px 0;
+    padding: 75px;
     height: auto;
   }
 
   @media (max-height: 780px) {
     height: auto;
   }
+
 
   &__inner {
     @include container;
