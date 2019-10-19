@@ -67,6 +67,9 @@
     opacity: 0;
     transform: translate(0px, -9.5rem);
     transition: transform 0.4s ease 0s, opacity 0.3s ease 0.1s, visibility 0s ease 0.5s;
+    @media (max-width: $screen-lg) {
+      display: none;
+    }
   }
 
   &--fixet-active{
