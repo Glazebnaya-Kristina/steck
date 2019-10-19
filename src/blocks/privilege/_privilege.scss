@@ -56,4 +56,21 @@
     margin-top: 5px;
     color: #7633ff;
   }
+
+  &__quantity{
+    &--no-active{
+      display: none;
+    }
+  }
+
+  &__accept{
+    display: none;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+
+    &--active{
+      display: block;
+    }
+  }
 }
