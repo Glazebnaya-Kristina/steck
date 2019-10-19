@@ -1,0 +1,25 @@
+//- Все примеси в этом файле должны начинаться c имени блока (form-email)
+
+mixin form-email(textBtn, placeholdenText, mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' form-email--' + modsList[i].trim();
+      }
+    }
+
+
+  +form('middle').form-email__form(class=allMods)&attributes(attributes)
+    +label('Еmail').form-email__label
+      +input()(type='email', placeholder=placeholdenText)
+    +button(textBtn, 'violet')(type='button').form-email__button

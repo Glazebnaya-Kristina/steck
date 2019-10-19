@@ -1,0 +1,14 @@
+.form-email{
+  &__form {
+    margin-top: 40px;
+  }
+
+  &__label {
+    margin-right: 15px;
+  }
+  &__button{
+    @media (max-width: $screen-sm) {
+      margin-top: 20px;
+    }
+  }
+}
