@@ -9,6 +9,10 @@
     height: auto;
   }
 
+  @media (max-height: 780px) {
+    height: auto;
+  }
+
   &__inner {
     @include container;
     position: relative;
