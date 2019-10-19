@@ -1,0 +1,30 @@
+//- Все примеси в этом файле должны начинаться c имени блока (privilege)
+
+mixin privilege(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +page-header()
+          p «Шапка»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' privilege--' + modsList[i].trim();
+      }
+    }
+
+  ul.privilege(class=allMods)&attributes(attributes)
+    li.privilege__item
+      b.privilege__title Bonus
+      p.privilege__description 10 TL
+    li.privilege__item
+      b.privilege__title Premium Card
+      p.privilege__description 5 cards left
+    li.privilege__item
+      b.privilege__title Bonus
+      p.privilege__description 5 TL

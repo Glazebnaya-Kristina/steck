@@ -1,0 +1,46 @@
+.privilege{
+  @include ul-reset;
+  display: flex;
+  margin-top: 40px;
+  @media (max-width: $screen-md-small) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 160px;
+    padding: 25px 15px;
+    border: 2px solid $black;
+    border-radius: 5px;
+    &:not(:first-child){
+      margin-left: 20px;
+      @media (max-width: $screen-md-small) {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: $screen-md-small) {
+      max-width: 290px;
+      width: 100%;
+      margin-left: 0;
+    }
+
+  }
+
+  &__title{
+    font-weight: 600;
+    font-size: 20px;
+    color: $black;
+  }
+
+  &__description{
+    margin: 0;
+    font-weight: 600;
+    color: $black;
+  }
+}
