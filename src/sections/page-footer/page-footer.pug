@@ -21,7 +21,7 @@ mixin page-footer(mods)
     .page-footer__inner
       +navigation()
         +logo(href='#').page-footer__link-logo
-          svg.logo__icon
+          svg.logo__icon.logo__icon--grey
             use(xlink:href='icons/sprite.svg#icon-logo')
         ul.navigation__list.page-footer__list
           +navigation-item('Şartlar ve koşullar', '#')
