@@ -8,6 +8,7 @@
 
   &__item {
     display: flex;
+
     &:not(:first-child) {
       margin-left: 20px;
     }
@@ -24,6 +25,34 @@
     &:focus {
       .social__icon {
         fill: $color-violet;
+      }
+    }
+
+    &--color-disc {
+      max-width: 60px;
+      height: 60px;
+      background-color: $color-violet;
+      border-radius: 50%;
+      transition: $transition-time;
+
+      &:hover,
+      &:focus {
+        background-color: #9658ff;
+        .social__icon{
+          fill: #fff !important;
+        }
+      }
+
+      @media (max-width: $screen-md-small) {
+        max-width: 50px;
+        height: 50px;
+      }
+    }
+
+    &--fb {
+      .social__icon {
+        width: 30% !important;
+        height: 100%;
       }
     }
   }

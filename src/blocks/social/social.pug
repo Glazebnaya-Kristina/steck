@@ -38,12 +38,12 @@ mixin social-item(text, href, iconName, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-      allMods = allMods + 'social__item--' + modsList[i].trim();
+      allMods = allMods + ' social__link--' + modsList[i].trim();
       }
     }
 
-  li.social__item(class=allMods)&attributes(attributes)
-    a.social__link(href=href, target='_blank')
+  li.social__item
+    a.social__link(class=allMods)&attributes(attributes)(href=href, target='_blank')
       span.social__name!= text
       svg.social__icon
         use(xlink:href='icons/sprite.svg#icon-' + iconName)
