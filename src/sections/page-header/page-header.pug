@@ -1,6 +1,6 @@
 //- Все примеси в этом файле должны начинаться c имени блока (page-header)
 
-mixin page-header(mods)
+mixin page-header(href,mods)
 
   //- Принимает:
   //-   mods  {string} - список модификаторов
@@ -20,6 +20,6 @@ mixin page-header(mods)
 
   header.page-header(class=allMods)&attributes(attributes)
     .page-header__inner
-      +logo('#')
+      +logo(href=href)
         img(class='page-header__img', src='images/logo.svg', alt='Логотип Steck')
       h1.page-header__title  Банк Steck
