@@ -4,18 +4,22 @@
   height: 100vh;
   padding: 220px 0;
 
+  @media(orientation: landscape){
+    height: auto;
+  }
+
   @media (max-width: $screen-lg) {
     padding: 100px 0 0;
-  }
-
-  @media (max-width: $screen-sm) {
-    padding: 75px 0 0;
     height: auto;
   }
 
-  @media (max-height: 780px) {
-    height: auto;
+  @media (max-width: $screen-md-small) {
+    padding: 75px 0;
   }
+
+  //@media (max-width: $screen-sm) {
+  //  height: auto;
+  //}
 
   &__inner {
     @include container;
@@ -26,7 +30,7 @@
     }
 
     @media (max-width: $screen-md-small) {
-      padding-bottom: 375px;
+      padding-bottom: 0;
     }
 
 
@@ -55,14 +59,23 @@
       }
 
       @media (max-width: $screen-md-small) {
-        bottom: 0;
-        height: 330px;
-        width: 180px;
+        display: none;
       }
     }
   }
 
   &__list{
     margin-top: 40px;
+  }
+
+  &__img{
+    display: none;
+    @media (max-width: $screen-md-small) {
+      display: block;
+      width: 80%;
+      margin-top: 150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
