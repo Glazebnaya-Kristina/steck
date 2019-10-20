@@ -6,4 +6,7 @@
   @media (max-width: $screen-md) {
     font-size: $font-size-title-xs;
   }
+  @media (max-width: $screen-sm) {
+    text-align: center;
+  }
 }

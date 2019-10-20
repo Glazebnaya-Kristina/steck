@@ -26,9 +26,9 @@
   cursor: pointer;
   transition: all $transition-time;
 
-  @media (max-width: $screen-md) {
-    font-size: $font-size-small;
-  }
+  //@media (max-width: $screen-md) {
+  //  font-size: $font-size-small;
+  //}
 
   &--disabled,
   &:disabled {
