@@ -6,8 +6,23 @@
   }
 
   &__inner {
-    @include container;
     position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (max-width: $screen-xl) {
+      width: 800px;
+    }
+    @media (max-width: $screen-lg) {
+      width: $container-md;
+    }
+    @media (max-width: $screen-md) {
+      width: $container-md;
+    }
+    @media (max-width: $screen-md-small) {
+      width: 100%;
+    }
   }
 
   &__title{
@@ -15,6 +30,7 @@
     font-size: $font-size-h1;
     font-weight: 400;
     color: $black;
+    text-align: center;
     @media (max-width: $screen-sm) {
       font-size: 28px;
     }
