@@ -120,6 +120,7 @@ $grid-gutter-width:           30px !default;
 
   @media (max-width: $screen-md) {
     width: $container-md;
+    height: 100%;
 
     @if ($md-grid-gutter != $sm-grid-gutter) {
       padding-left: ($md-grid-gutter / 2);
