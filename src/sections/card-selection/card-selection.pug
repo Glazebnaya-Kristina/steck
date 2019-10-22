@@ -27,5 +27,5 @@ mixin card-selection(mods)
       p.card-selection__text Almak için 5 veya daha fazla kişiyi tavsiye edin.
       +form('middle').card-selection__form
         +label('Еmail').card-selection__label
-          +input()(type='email')
+          +input()(type='email', placeholder='email')
         +button('Erken Erişim', 'violet')(type='button').card-selection__button
