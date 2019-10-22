@@ -43,7 +43,7 @@ mixin social-item(text, href, iconName, mods)
     }
 
   li.social__item
-    a.social__link(class=allMods)&attributes(attributes)(href=href, target='_blank')
+    a.social__link(class=allMods, href=href, target='_blank')&attributes(attributes)
       span.social__name!= text
       svg.social__icon
         use(xlink:href='icons/sprite.svg#icon-' + iconName)
