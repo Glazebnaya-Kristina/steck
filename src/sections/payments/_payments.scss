@@ -4,7 +4,7 @@
   height: 100vh;
   padding: 220px 0;
 
-  @media(orientation: landscape){
+  @media(orientation: landscape) and (max-width: 900px){
     height: auto;
   }
 
