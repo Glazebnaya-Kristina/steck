@@ -20,14 +20,9 @@ mixin new-generation(mods)
 
   section.new-generation(class=allMods)&attributes(attributes)
     .new-generation__inner
-      +title('Yeni nesil "ücretsiz"')
-      +subtitle('Talep etmediğimiz ücretler:').new-generation__subtitle
-      +list('disc').new-generation__list
-        +list-item('EFT/Havale').new-generation__item
-        +list-item('ATM para yatırma/çekme').new-generation__item
-        +list-item('Yurtdışında ATM para çekme').new-generation__item
-        +list-item('Döviz kuru ücreti ').new-generation__item
-        +list-item('Hesap ücreti ').new-generation__item
-        +list-item('Fatura ödeme ücreti').new-generation__item
-        +list-item('Hiçbir gizli ücreti').new-generation__item
+      +title('Yeni nesil “masrafsız”')
+      +subtitle('MASRAFSIZ ATM ÇEKİMLERİ', 'black, text-small').new-generation__subtitle
+      +description("Para çekmenin ücretsiz olması gerektiğine inanıyoruz. Bu nedenle ATM ücretlerini elimine etmeye karar verdik. Şimdi en yakın ATM'ye gidip bunu gerçekleştirip deneyimleyebilirsiniz.")
+      +subtitle('YURTDIŞI HARCAMALARINIZ', 'black, text-small').new-generation__subtitle
+      +description('Ayrıca dünyanın finansal sınırlarının olmaması gerektiğine inanıyoruz. Zenmo ile, yurtdışında ücretsiz olarak para çekebilir veya harcamalarınızı dilediğiniz para birimlerinden komisyonsuz yapabilirsiniz.')
       img(src='images/new-generation-mob.png', alt="new-generation-img").new-generation__img
