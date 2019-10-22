@@ -24,10 +24,9 @@ mixin page-footer(mods)
           svg.logo__icon.logo__icon--grey
             use(xlink:href='icons/sprite.svg#icon-logo')
         ul.navigation__list.page-footer__list
-          +navigation-item('Şartlar ve koşullar', '#')
           +navigation-item('Sık sorunlar', 'сommon-problems.html')
-          +navigation-item('Durumum', 'status-page.html')
-          +navigation-item('İletişim', '#')
+          +navigation-item('Durumum', 'status-page.html')#openstatus
+          +navigation-item('İletişim', 'status-page.html')
         +social().page-footer__social
           +social-item('facebook', '#', 'tw')
           +social-item('facebook', '#', 'fb')
