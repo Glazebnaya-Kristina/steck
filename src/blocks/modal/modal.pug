@@ -1,0 +1,20 @@
+//- Все примеси в этом файле должны начинаться c имени блока (modal)
+
+mixin modal(mods)
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' modal--' + modsList[i].trim();
+      }
+    }
+
+  section(class=allMods)&attributes(attributes).modal
+    .popup#openstatus.modal-openstatus
+      .modals__dialog
+        button(type='button').modals__close.close
+          span.modal__button-close-name Закрыть модальное окно
+        .modals__content
+          +form-email('Durumum', 'email').modal-openstatus__form
