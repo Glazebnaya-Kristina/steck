@@ -1,0 +1,14 @@
+.description{
+  max-width: 550px;
+  margin: 0;
+  margin-top: 10px;
+  @media (max-width: $screen-xl) {
+    max-width: 380px;
+  }
+  @media (max-width: $screen-lg) {
+    max-width: 100%;
+  }
+  @media (max-width: $screen-sm) {
+    text-align: center;
+  }
+}
