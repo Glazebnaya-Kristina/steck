@@ -3,6 +3,7 @@
 //- Глобальные подключения
 include ../blocks/button/button.pug
 include ../blocks/burger/burger.pug
+include ../blocks/modal/modal.pug
 
 doctype html
 html(class='page', lang='tr')
@@ -46,6 +47,8 @@ html(class='page', lang='tr')
 
           .page__footer-wrapper
             block footer
+
+        +modal()
 
     block bottom
       script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
