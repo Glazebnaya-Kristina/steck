@@ -6,7 +6,8 @@
 
   $block-name: &; // #{$block-name}__element
 
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
   max-width: 100px;
 
@@ -17,7 +18,7 @@
   &__icon{
     fill: $black;
     width: 100px;
-    height: 40px;
+    height: 23px;
     transition: $transition-time;
   }
 
