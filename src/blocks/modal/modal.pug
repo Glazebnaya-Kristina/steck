@@ -18,3 +18,8 @@ mixin modal(mods)
           span.modal__button-close-name Закрыть модальное окно
         .modals__content
           +form-email('Durumum', 'email').modal-openstatus__form
+          p.modal-openstatus__registration
+            | Zenmo'ya kaydolmamış gibisininiz. Kaydolmak için
+            +link('burayı', 'index.html#page-header', 'violet, d-ib').modal-openstatus__registration-link
+            | tıklayınız ve e-postanızı girin.
+

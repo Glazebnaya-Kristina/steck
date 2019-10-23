@@ -31,6 +31,11 @@
   }
 
   &__social{
+    // уважаемый Мурат, вот 2 строки удалите и соц сети появятся!
+    opacity: 0;
+    z-index: -1;
+    // уважаемый Мурат, вот 2 строки удалите и соц сети появятся!
+
     margin-left: auto;
     @media (max-width: $screen-xl) {
       margin-left: 0;
@@ -40,6 +45,9 @@
     }
 
     @media (max-width: $screen-sm) {
+      // уважаемый Мурат, вот эту строку удалите и соц сети появятся!
+      display: none;
+      // уважаемый Мурат, вот эту строку удалите и соц сети появятся!
       order: 3;
       margin: 0 auto;
       margin-top: 20px;
@@ -55,6 +63,14 @@
     @media (max-width: $screen-sm) {
       order: 2;
       justify-content: center;
+    }
+  }
+
+  &__item{
+    &--special{
+      > a{
+        font-weight: 600;
+      }
     }
   }
 

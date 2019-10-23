@@ -18,9 +18,9 @@ mixin page-header(href, mods)
       }
     }
 
-  header.page-header(class=allMods)&attributes(attributes)
+  header.page-header(class=allMods)&attributes(attributes)#page-header
     .page-header__inner
       +logo(href=href)
         svg.logo__icon
-          use(xlink:href='icons/sprite.svg#icon-logo')
+          use(xlink:href='icons/sprite.svg#icon-logo22')
       h1.page-header__title  Банк Steck

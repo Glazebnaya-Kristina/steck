@@ -26,7 +26,6 @@
 }
 
 .popup {
-  //animation: slideDown .25s ease-in-out;
   display: none;
   position: relative;
   margin: auto;
@@ -34,10 +33,6 @@
   overflow-y: auto;
   z-index: 7;
   width: 100%;
-  //@include breakpoint(md) {
-  //  width: auto;
-  //  height: auto;
-  //}
 
   &--opened {
     display: block;
@@ -63,21 +58,17 @@
   overflow-y: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100%;
   background-color: #fff;
   border-radius: 4px;
-
-  //@include breakpoint(md) {
-  //  padding: 50px 80px;
-  //  max-width: 660px;
-  //  height: auto;
-  //}
 }
 
 .modals__content {
   position: relative;
   width: 100%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,8 +88,21 @@
   border: none;
 }
 
-.modal-openstatus__form{
-  width: 100%;
+.modal-openstatus{
+  &__form{
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  &__registration{
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__registration-link{
+    margin: 0 5px;
+  }
 }
 
 .close{
