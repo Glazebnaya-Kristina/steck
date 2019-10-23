@@ -27,12 +27,4 @@ $(function(){
       popur.classList.remove('popup--opened');
       document.body.classList.remove('hidden');
    };
-
-   var $page = $('html, body');
-   $('a[href*="#"]').click(function() {
-      $page.animate({
-         scrollTop: $($.attr(this, 'href')).offset().top
-      }, 400);
-      return false;
-   });
 });
