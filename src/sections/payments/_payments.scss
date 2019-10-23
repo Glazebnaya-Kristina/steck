@@ -17,10 +17,6 @@
     padding: 75px 0;
   }
 
-  //@media (max-width: $screen-sm) {
-  //  height: auto;
-  //}
-
   &__inner {
     @include container;
     position: relative;
@@ -41,7 +37,7 @@
       transform: translateY(-50%);
       height: 600px;
       width: 325px;
-      background-image: url('#{$imageDir}payments1.gif');
+      background-image: url('#{$imageDir}payments2.gif');
       background-repeat: no-repeat;
       background-size: contain;
 
@@ -72,7 +68,7 @@
     display: none;
     @media (max-width: $screen-md-small) {
       display: block;
-      width: 80%;
+      width: 73%;
       margin-top: 150px;
       margin-left: auto;
       margin-right: auto;
