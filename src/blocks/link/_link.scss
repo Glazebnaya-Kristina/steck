@@ -9,5 +9,12 @@
   }
 
   //модификаторы
+  &--violet{
+    color: $color-violet;
+  }
+
+  &--d-ib{
+    display: inline-block;
+  }
 
 }
