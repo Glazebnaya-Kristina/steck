@@ -21,11 +21,8 @@ mixin security(mods)
   section.security(class=allMods)&attributes(attributes)
     .security__inner
       +title('Güvenlik - kontrol sadece sende')
-      +subtitle('Uygulamayı devre dışı bırak / etkinleştir:')
-      +list('disc').security__list
-        +list-item('Temassız ödemeler')
-        +list-item('Steck kartı')
-        +list-item('ATM işlemleri')
-        +list-item('Manyetik şerit ödemeleri')
-        +list-item('Online ödemeler')
+      +subtitle('kartınızı dondurun ve çözün', 'black, text-small')
+      +description('Kartınızı kaybetmek artık bir sorun değil. Kaybederseniz, saniyeler içinde bir uygulamada dondurun, size yeni bir tane gönderelim. Eğer bulursanız, kartınızı çözün.')
+      +subtitle('kartınızın nasıl çalıştığını kontrol edin', 'black, text-small')
+      +description("Cebinizden ATM'den para çekme, online ödemeler, temassız ödemeleri, pin değiştirme, limit belirleme ve daha birçok işlemi dondurabilir veya aktif edebilirsiniz.")
       img(src='images/security-mob.png', alt="security-img").security__img

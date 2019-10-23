@@ -9,16 +9,12 @@
     height: auto;
   }
 
+  @media(orientation: landscape) and (max-width: 900px){
+    height: auto;
+  }
+
   @media (max-width: $screen-md-small) {
     padding: 75px 0;
-  }
-  //
-  //@media (max-width: $screen-sm) {
-  //  height: auto;
-  //}
-
-  @media (orientation: landscape){
-    height: auto;
   }
 
   &__inner {
@@ -37,7 +33,6 @@
       height: auto;
     }
 
-
     &:after {
       @include pseudo;
       right: 70px;
@@ -45,7 +40,7 @@
       transform: translateY(-50%);
       height: 660px;
       width: 355px;
-      background-image: url('#{$imageDir}security.gif');
+      background-image: url('#{$imageDir}security1.gif');
       background-repeat: no-repeat;
       background-size: contain;
 
@@ -76,7 +71,7 @@
     display: none;
     @media (max-width: $screen-md-small) {
       display: block;
-      width: 80%;
+      width: 73%;
       margin-top: 150px;
       margin-left: auto;
       margin-right: auto;
