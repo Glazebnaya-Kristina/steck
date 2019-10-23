@@ -1,0 +1,21 @@
+.arrow{
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 30px;
+  height: 30px;
+  transition: $transition-time;
+
+  @media (max-width: $screen-md-small) {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__icon{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    fill: $color-violet;
+  }
+}

@@ -1,0 +1,21 @@
+//- Все примеси в этом файле должны начинаться c имени блока (arrow)
+
+mixin arrow(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +faq()
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' arrow--' + modsList[i].trim();
+      }
+    }
+
+  span.arrow(class=allMods)&attributes(attributes)
+    svg.arrow__icon
+      use(xlink:href='icons/sprite.svg#icon-arrow')
