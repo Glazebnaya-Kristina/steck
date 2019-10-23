@@ -11,7 +11,6 @@ include ../../blocks/form/form.pug
 include ../../blocks/form-email/form-email.pug
 include ../../blocks/field-text/field-text.pug
 include ../../blocks/link/link.pug
-include ../../blocks/copyright/copyright.pug
 include ../../blocks/input/input.pug
 include ../../blocks/label/label.pug
 include ../../blocks/list/list.pug
@@ -30,6 +29,10 @@ block meta
   title Steck
   meta(name='description', content='')
 
+block head
+  link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css")
+  link(rel="stylesheet" href="styles/index.min.css")
+
 block header
   +page-header('#')
 
@@ -44,3 +47,8 @@ block content
 
 block footer
   +page-footer()
+
+block bottom
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js")
+  script(src="scripts/script.min.js")
