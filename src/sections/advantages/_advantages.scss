@@ -12,10 +12,6 @@
   @media (max-width: $screen-md-small) {
     padding: 75px 0;
   }
-  //
-  //@media (max-width: $screen-sm) {
-  //  height: auto;
-  //}
 
   @media (max-height: 780px) {
     height: auto;
@@ -44,7 +40,7 @@
 
     @media (max-width: $screen-sm) {
       grid-template-columns: 1fr;
-      max-width: 320px;
+      max-width: 350px;
       margin: 0 auto;
     }
   }
