@@ -6,26 +6,10 @@
   }
 
   &__inner {
-    position: relative;
-    width: 1000px;
-    margin: 0 auto;
-    padding: 0 15px;
-
-    @media (max-width: $screen-xl) {
-      width: 800px;
-    }
-    @media (max-width: $screen-lg) {
-      width: $container-md;
-    }
-    @media (max-width: $screen-md) {
-      width: $container-md;
-    }
-    @media (max-width: $screen-md-small) {
-      width: 100%;
-    }
+    @include container;
   }
 
-  &__title{
+  &__title {
     margin: 0;
     font-size: $font-size-h1;
     font-weight: 400;
@@ -36,15 +20,10 @@
     }
   }
 
-  &__list{
+  &__list {
     @include ul-reset;
     margin: 0 auto;
     margin-top: 85px;
-    max-width: 1000px;
-
-    @media (max-width: $screen-xl) {
-      max-width: 800px;
-    }
 
     @media (max-width: $screen-lg) {
       margin-top: 50px;
@@ -55,27 +34,49 @@
     }
   }
 
-  &__item{
-    &:not(:first-child){
-      margin-top: 60px;
-      @media (max-width: $screen-sm) {
-        margin-top: 40px;
-      }
+  &__item {
+    position: relative;
+    padding: 30px 0;
+    padding-right: 55px;
+    border-top: 1px solid rgba(215,222,224,.64);
+
+    &:last-child{
+      border-bottom: 1px solid rgba(215,222,224,.64);
+    }
+
+    @media (max-width: $screen-sm) {
+      padding-right: 30px;
     }
   }
 
-  &__question{
+  &__question {
+    display: block;
     margin: 0;
     font-weight: 400;
     color: $black;
+    cursor: pointer;
+
     @media (max-width: $screen-sm) {
       font-size: 22px;
     }
   }
 
-  &__answer{
+
+  &__question--active{
+
+    .faq__arrow{
+      transform: rotate(90deg);
+    }
+  }
+
+  &__answer {
+    display: none;
     margin: 0;
     margin-top: 20px;
+  }
+
+  .faq__arrow--active{
+    transform: rotate(90deg);
   }
 
 }
