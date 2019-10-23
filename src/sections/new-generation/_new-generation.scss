@@ -30,8 +30,8 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      height: 385px;
-      width: 540px;
+      height: 400px;
+      width: 580px;
       background-image: url('#{$imageDir}new-generation.gif');
       background-repeat: no-repeat;
       background-size: contain;
@@ -57,7 +57,7 @@
     display: none;
     @media (max-width: $screen-md-small) {
       display: block;
-      width: 80%;
+      width: 81%;
       margin-top: 150px;
       margin-left: auto;
       margin-right: auto;
