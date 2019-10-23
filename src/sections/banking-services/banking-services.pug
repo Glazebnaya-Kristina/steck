@@ -18,10 +18,10 @@ mixin banking-services(mods)
       }
     }
 
-  section.banking-services(class=allMods)&attributes(attributes)
+  section.banking-services(class=allMods)&attributes(attributes)#banking-services
     .banking-services__inner
       +title('Bankacılık. Tamamen yenilenmiş.')
-      +subtitle('Şübesiz. Ücretsiz. Kolay.').banking-services__subtitle
+      +subtitle('Şubesiz. Masrafsız. Kolay.').banking-services__subtitle
       +form('middle').banking-services__form
         +label('Еmail').banking-services__label
           +input()(type='email', placeholder='email')
