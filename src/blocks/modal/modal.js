@@ -1,6 +1,6 @@
 $(function(){
 
-   var openModal = document.querySelector('#openstatus a');
+   var openModal = document.querySelector('.modal-openstatus a');
    var modal = document.querySelector('.modal');
    var popur = document.querySelector('.popup');
    var closeModal = document.querySelector('.close');
