@@ -95,9 +95,14 @@
   }
 
   &__registration{
+    display: none;
     margin: 0;
     margin-top: 20px;
     text-align: center;
+    /*---- для текста что клиент не зарегестрирован ----*/
+    &--active{
+      display: block;
+    }
   }
 
   &__registration-link{
