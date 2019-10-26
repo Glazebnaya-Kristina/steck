@@ -14,8 +14,10 @@ include ../../blocks/label/label.pug
 include ../../blocks/list/list.pug
 include ../../blocks/navigation/navigation.pug
 include ../../blocks/privilege/privilege.pug
+include ../../blocks/article/article.pug
 include ../../sections/page-header/page-header.pug
 include ../../sections/page-footer/page-footer.pug
+include ../../sections/articles/articles.pug
 
 block meta
   title Blog
@@ -28,6 +30,8 @@ block header
   +page-header('index.html')
 
 block content
+  +articles()
+    +article()
 
 block footer
   +page-footer()

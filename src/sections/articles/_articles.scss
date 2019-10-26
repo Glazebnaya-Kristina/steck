@@ -1,0 +1,11 @@
+.articles{
+  padding: 50px 0 85px;
+
+  @media (max-width: $screen-sm) {
+    padding: 50px 0 85px;
+  }
+
+  &__inner {
+    @include container;
+  }
+}

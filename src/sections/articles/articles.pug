@@ -1,0 +1,21 @@
+//- Все примеси в этом файле должны начинаться c имени блока (articles)
+
+mixin articles(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +article()
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' articles--' + modsList[i].trim();
+      }
+    }
+
+  section.articles(class=allMods)&attributes(attributes)
+    block
