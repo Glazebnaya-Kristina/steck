@@ -1,0 +1,40 @@
+//- Главная страница
+extends ../../layouts/layout.pug
+
+//- Подключения блоков
+include ../../blocks/logo/logo.pug
+include ../../blocks/social/social.pug
+include ../../blocks/title/title.pug
+include ../../blocks/subtitle/subtitle.pug
+include ../../blocks/form/form.pug
+include ../../blocks/form-email/form-email.pug
+include ../../blocks/link/link.pug
+include ../../blocks/input/input.pug
+include ../../blocks/label/label.pug
+include ../../blocks/list/list.pug
+include ../../blocks/navigation/navigation.pug
+include ../../blocks/privilege/privilege.pug
+include ../../blocks/article/article.pug
+include ../../sections/page-header/page-header.pug
+include ../../sections/page-footer/page-footer.pug
+include ../../sections/post/post.pug
+
+block meta
+  title Zenmo | Post-page
+  meta(name='description', content='')
+
+block head
+  link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+  link(rel="dns-prefetch" href="//cdnjs.cloudflare.com/")
+  link(rel="preconnect" href="//cdnjs.cloudflare.com/")
+  link(rel="stylesheet" href="styles/post-page.min.css")
+
+block header
+  +page-header('index.html')
+
+block content
+  +post()
+    +article()
+
+block footer
+  +page-footer()
