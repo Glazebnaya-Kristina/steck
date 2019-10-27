@@ -1,0 +1,56 @@
+//- Все примеси в этом файле должны начинаться c имени блока (article-preview)
+
+mixin article-preview(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +article-preview()
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' article-preview--' + modsList[i].trim();
+      }
+    }
+
+  ul.article-preview(class=allMods)&attributes(attributes)
+    li.article-preview__item
+      a(href='post-page.html').article-preview__link-item
+        article.article-preview__article
+          header.article-preview__article-header
+            p.article-preview__wrapper-foto
+              img(src='images/post-img.png' alt='article foto').article-preview__article-foto
+            //h2.article-preview__article-title Title-title-Title-title
+          .article-preview__article-body
+            p.article-preview__article-text Zenmo, Türkiye'nin gerçek mobil bankacılığının meydan okuyucusudur. #[br]Basit, zarif ve kullanımı kolay hale getirmek için bankacılığı tamamen yeniden tasarlamak için büyük bir görev üstlendik.
+          footer.article-preview__article-footer
+            img(src='images/author-foto.jpg', alt='Author foto').article-preview__article-author-foto
+            span.article-preview__article-author Murat Şayir
+    li.article-preview__item
+      a(href='post-page.html').article-preview__link-item
+        article.article-preview__article
+          header.article-preview__article-header
+            p.article-preview__wrapper-foto
+              img(src='images/post-img.png' alt='article foto').article-preview__article-foto
+            //h2.article-preview__article-title Title-title-Title-title
+          .article-preview__article-body
+            p.article-preview__article-text Zenmo, Türkiye'nin gerçek mobil bankacılığının meydan okuyucusudur. #[br]Basit, zarif ve kullanımı kolay hale getirmek için bankacılığı tamamen yeniden tasarlamak için büyük bir görev üstlendik.
+          footer.article-preview__article-footer
+            img(src='images/author-foto.jpg', alt='Author foto').article-preview__article-author-foto
+            span.article-preview__article-author Murat Şayir
+    li.article-preview__item
+      a(href='post-page.html').article-preview__link-item
+        article.article-preview__article
+          header.article-preview__article-header
+            p.article-preview__wrapper-foto
+              img(src='images/post-img.png' alt='article foto').article-preview__article-foto
+            //h2.article-preview__article-title Title-title-Title-title
+          .article-preview__article-body
+            p.article-preview__article-text Zenmo, Türkiye'nin gerçek mobil bankacılığının meydan okuyucusudur. #[br]Basit, zarif ve kullanımı kolay hale getirmek için bankacılığı tamamen yeniden tasarlamak için büyük bir görev üstlendik.
+          footer.article-preview__article-footer
+            img(src='images/author-foto.jpg', alt='Author foto').article-preview__article-author-foto
+            span.article-preview__article-author Murat Şayir
