@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (post)
+
+mixin post(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +article()
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' post--' + modsList[i].trim();
+      }
+    }
+
+  section.post(class=allMods)&attributes(attributes)
+    .post__inner
+      h1.post__title Blog
+      block
