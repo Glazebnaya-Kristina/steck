@@ -15,15 +15,20 @@ include ../../blocks/list/list.pug
 include ../../blocks/navigation/navigation.pug
 include ../../blocks/privilege/privilege.pug
 include ../../blocks/article/article.pug
+include ../../blocks/article-preview/article-preview.pug
 include ../../sections/page-header/page-header.pug
 include ../../sections/page-footer/page-footer.pug
+include ../../sections/post/post.pug
 include ../../sections/articles/articles.pug
 
 block meta
-  title Blog
+  title Zenmo | Blog
   meta(name='description', content='')
 
 block head
+  link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
+  link(rel="dns-prefetch" href="//cdnjs.cloudflare.com/")
+  link(rel="preconnect" href="//cdnjs.cloudflare.com/")
   link(rel="stylesheet" href="styles/blog.min.css")
 
 block header
@@ -31,7 +36,7 @@ block header
 
 block content
   +articles()
-    +article()
+    +article-preview()
 
 block footer
   +page-footer()
