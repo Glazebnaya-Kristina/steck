@@ -1,0 +1,46 @@
+//- Все примеси в этом файле должны начинаться c имени блока (article)
+
+mixin article(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+
+  //- Вызов:
+        +article()
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+      allMods = allMods + ' article--' + modsList[i].trim();
+      }
+    }
+
+  article.article(class=allMods)&attributes(attributes)
+    header.article__header
+      +link('', '#').article__link-time
+        time(datetime="2019-10-26").article__time 28 Ekim, 2019
+      h2.article__title Zenmo'ya hoş geldiniz.
+      p.article__wrapper-foto
+        img(src='images/post-img.png' alt='article foto').article__foto
+    .article__body
+      p.article__text Zenmo, Türkiye'nin gerçek mobil bankacılığının meydan okuyucusudur. Aslında “banka” kelimesini sevmiyoruz. Geleneksel bankaların önümüzdeki 10 yıl içinde yok olacağına inanıyoruz. Karmaşıklar, müşterilere cevap verme konusunda yavaşlar, şeffaflıktan yoksunlar, birtakım isimler altında gizli ücretler alıyorlar ve bizi şubelere yönlendirerek hayatımızdaki en değerli şeyi çalıyorlar zamanımızı.
+      p.article__text Basit, zarif ve kullanımı kolay hale getirmek için bankacılığı tamamen yeniden tasarlamak için büyük bir görev üstlendik.
+      p.article__text Bunu gerçekleştirmek için ilk adımı attığımızı bildirmekten mutluluk duyuyoruz. Zenmo'yu ilk deneyenlerden biri olmak için katılabileceğiniz bir bekleme listesi başlatıyoruz.
+      p.article__text Temel olarak geleneksel bankalardan farklıyız çünkü tüm deneyimimiz akıllı telefonunuza uygun tasarlandı. Geleneksel bankalar mobil bankacılığı sadece klasik bankacılık kanallarından biri olarak görüyorlar.
+      p.article__text Bizim mobil bankacılık modelimiz sizlere çok daha düşük maliyetli bir yapı üzerinde çalışmamızı sağlıyor. Pahalı şube ağı veya eski teknoloji olmadan, bu tasarrufları sizelere aktarabilir ve deneyiminizi daha da iyi hale getirebiliriz.
+      p.article__text Ayrıca, tasarım ve kullanıcı deneyimine büyük önem verdik ve gururla Türkiye'deki ilk ve tek tasarım lideri mobil bankası olduğumuzu söyleyebiliriz. Tasarımın, işin kalbine yerleştirilmesinin, ürün ve hizmetini harika yapan şey olduğunu biliyoruz.
+      p.article__text Sizlere bu hizmeti mümkün olan en kısa sürede vermek için, bankacılık düzenlemelerine uygunluğu yaparken aynı zamanda Türkiye’de lisanslı bir bankayla ortak olmaya karar verdik. Bu adım size mümkün olan en kısa sürede deneyimimizi sunmamızı sağlayacaktır. Yakında daha fazla ayrıntı açıklayacağız.
+      p.article__text Tamamen ücretsiz olan uygulamamız, karmaşıklığın arasından sıyrılmak için mükemmel şekilde tasarlanmış bir kartla birlikte geliyor.
+      p.article__text Yeni bir değişim zamanı. Yeni bir banka zamanı. Sizin zamanımız.
+      p.article__text Zenmo Team #[br]
+        +link('zenmoapp.com', 'index.html').article__text-link
+    footer.article__footer
+      p.article__footer-text Hikayemizi paylaşın
+      +social().article__social
+        +social-item('Linkedin', '#', 'in', 'color-disc')
+        +social-item('facebook', '#', 'fb', 'color-disc, fb')
+        +social-item('whatsapp', '#', 'whatsapp', 'color-disc, wp')
+        +social-item('email', '#', 'email', 'color-disc')
+      +form-email('Erken Erişim', 'email')
