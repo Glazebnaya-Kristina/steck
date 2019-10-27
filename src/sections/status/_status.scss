@@ -53,11 +53,6 @@
   &__list{
     margin-top: 40px;
 
-    .social__icon{
-      fill: $white;
-      width: 40%;
-      height: 100%;
-    }
     @media (max-width: $screen-md-small) {
       display: flex;
       justify-content: center;
