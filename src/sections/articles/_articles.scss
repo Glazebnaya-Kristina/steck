@@ -1,4 +1,4 @@
-.articles{
+.articles {
   padding: 50px 0 85px;
 
   @media (max-width: $screen-sm) {
@@ -7,5 +7,26 @@
 
   &__inner {
     @include container;
+  }
+
+  &__title{
+    margin: 0;
+    margin-top: 15px;
+    font-size: $font-size-h1;
+    font-weight: 400;
+    color: $black;
+    text-align: center;
+    @media (max-width: $screen-sm) {
+      font-size: 28px;
+    }
+  }
+
+  &__discription{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    &:first-of-type {
+      margin-top: 35px;
+    }
   }
 }
