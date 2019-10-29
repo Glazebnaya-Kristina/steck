@@ -18,7 +18,7 @@ mixin input(mods, isTextarea)
     }
 
   if (typeof (isTextarea) !== 'undefined' && isTextarea)
-    textarea.input(class=allMods)&attributes(attributes)
+    textarea.input.input--textarea(class=allMods)&attributes(attributes)
 
   else
     input.input(class=allMods)&attributes(attributes)

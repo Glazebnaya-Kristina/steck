@@ -16,4 +16,9 @@
     color: $color-gray-light;
     font-size: 15px;
   }
+
+  &--textarea{
+    border-radius: 20px;
+    resize: none;
+  }
 }
