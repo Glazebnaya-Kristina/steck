@@ -50,6 +50,7 @@
   }
 
   &__question {
+    position: relative;
     display: block;
     margin: 0;
     font-weight: 400;
@@ -65,7 +66,8 @@
   &__question--active{
 
     .faq__arrow{
-      transform: rotate(90deg);
+      transform: rotate(90deg) translateY(-50%);
+      transform-origin: top;
     }
   }
 
@@ -75,8 +77,13 @@
     margin-top: 20px;
   }
 
-  .faq__arrow--active{
-    transform: rotate(90deg);
+  &__arrow{
+    right: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: center;
+    @media (max-width: $screen-sm) {
+      right: -30px;
+    }
   }
-
 }
