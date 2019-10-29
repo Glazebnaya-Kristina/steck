@@ -19,7 +19,7 @@ mixin form-email(textBtn, placeholdenText, mods)
     }
 
 
-  +form('middle').form-email__form(class=allMods)&attributes(attributes)
+  +form().form-email(class=allMods)&attributes(attributes)
     +label('Еmail').form-email__label
       +input()(type='email', placeholder=placeholdenText)
     +button(textBtn, 'violet')(type='button').form-email__button

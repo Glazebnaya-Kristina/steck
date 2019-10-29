@@ -1,4 +1,7 @@
 .form-email{
+  @media (max-width: $screen-sm) {
+    flex-direction: column;
+  }
   &__form {
     margin-top: 40px;
   }
@@ -10,5 +13,23 @@
     @media (max-width: $screen-sm) {
       margin-top: 20px;
     }
+  }
+
+  &--middle{
+    max-width: 50%;
+    @media (max-width: $screen-lg) {
+      max-width: 100%;
+    }
+  }
+
+  &--large{
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &--height{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
   }
 }
