@@ -24,7 +24,7 @@ mixin status(mods)
       h2.status__subtitle Sizin yeriniz:
       strong.status__num #95
       p.status__description Premium erişim ister misiniz? Arkadaşlarını davet ederek hattı atla. Aşağıdaki linki kullandığınızdan emin olun.
-      +form-email('Linki Kopyala', 'https://test.com')
+      +form-email('Linki Kopyala', 'https://test.com', 'middle').status__form
       +social().status__list
         +social-item('Linkedin', '#', 'in', 'color-disc')
         +social-item('facebook', '#', 'fb', 'color-disc, fb')
