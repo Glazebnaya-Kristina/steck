@@ -30,13 +30,21 @@ block meta
   meta(name='description', content='')
 
 block head
+  link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+  link(rel="dns-prefetch" href="//cdnjs.cloudflare.com/")
+  link(rel="preconnect" href="//cdnjs.cloudflare.com/")
   link(rel="stylesheet" href="styles/status-page.min.css")
 
 block header
   +page-header('index.html')
 
 block content
+  +button('Erken Erişim', 'violet, fixet, hidden')(type='button')#email-modal
   +status()
 
 block footer
   +page-footer()
+
+block bottom
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="scripts/script.min.js")
