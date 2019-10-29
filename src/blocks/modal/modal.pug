@@ -12,14 +12,46 @@ mixin modal(mods)
     }
 
   section(class=allMods)&attributes(attributes).modal
-    .popup.modal-openstatus
+    .popup.modals.modal-openstatus
       .modals__dialog
-        button(type='button').modals__close.close
+        button(type='button').modals__close.close.modal-openstatus__close
           span.modal__button-close-name Закрыть модальное окно
         .modals__content
-          +form-email('Durumum', 'email').modal-openstatus__form
+          +form-email('Durumum', 'email', 'middle').modal-openstatus__form
           p.modal-openstatus__registration
             | Zenmo'ya kaydolmamış gibisininiz. Kaydolmak için
             +link('burayı', 'index.html#page-header', 'violet, d-ib').modal-openstatus__registration-link
             | tıklayınız ve e-postanızı girin.
+    .popup.modals.modal-email
+      .modals__dialog
+        button(type='button').modals__close.close.modal-email__close
+          span.modal__button-close-name Закрыть модальное окно
+        .modals__content.modals__content--height.modals__content--middle.modals__content--padding
+          .modals__top
+            +title("Zenmo'ya katıl.")
+          +form-email('Erken Erişim', 'email', 'height').modal-email__form
+    .popup.modals.modal-callback
+      .modals__dialog
+        button(type='button').modals__close.close.modal-callback__close
+          span.modal__button-close-name Закрыть модальное окно
+        .modals__content.modals__content--middle.modals__content--padding
+          +title('Bizimle iletişime geçin')
+          +subtitle('Herhangi bir sorunuz varsa bize bir mesaj gönderin.').modal-callback__subtitle
+          +form('column').modal-callback__form
+            +label('Isim').modal-callback__label
+              +input()(placeholder='isim')
+            +label('Email').modal-callback__label
+              +input()(placeholder='email')
+            +label('Mesaj').modal-callback__label
+              +input('','isTextarea')(placeholder='mesaj', rows='7').modal-callback__placeholder
+            +button('Gönder', 'violet')(type='button').modal-callback__button-send
+    .popup.modals.modal-accepted
+      .modals__dialog
+        button(type='button').modals__close.close.modal-accepted__close
+          span.modal__button-close-name Закрыть модальное окно
+        .modals__content
+          svg.modal-accepted__icon
+            use(xlink:href='icons/sprite.svg#icon-accept')
+          +title('Mesajınız gönderildi.').modal-accepted__title
+
 

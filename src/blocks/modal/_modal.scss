@@ -1,4 +1,4 @@
-.modal{
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,16 +11,13 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 
   &--opened {
     display: flex;
-    & > .modals__overlay {
-      display: block;
-      animation: show .3s ease-in-out;
-    }
   }
 
-  &__button-close-name{
+  &__button-close-name {
     @include hide-text;
   }
 }
@@ -29,17 +26,26 @@
   display: none;
   position: relative;
   margin: auto;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   z-index: 7;
   width: 100%;
+  height: 100%;
 
   &--opened {
     display: block;
   }
 }
 
-.modals__overlay{
+.modals{
+  &__subtitle{
+    margin: 0;
+    margin-top: 15px;
+    color: $black;
+    text-align: center;
+  }
+}
+
+.modals__overlay {
   position: fixed;
   left: 0;
   top: 0;
@@ -59,7 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #fff;
   border-radius: 4px;
@@ -73,6 +79,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &--padding{
+
+    @media (max-width: 480px) {
+      padding-bottom: 50px;
+      padding-top: 200px;
+    }
+  }
+
+  &--height {
+    justify-content: flex-end;
+    height: 100%;
+    padding: 30px 0;
+    padding-top: 55px;
+  }
+
+  &--middle{
+    max-width: 450px;
+  }
+
 }
 
 
@@ -86,44 +112,113 @@
   height: 30px;
   background-color: transparent;
   border: none;
-}
-
-.modal-openstatus{
-  &__form{
-    max-width: 100% !important;
-    width: 100%;
-  }
-
-  &__registration{
-    display: none;
-    margin: 0;
-    margin-top: 20px;
-    text-align: center;
-    /*---- для текста что клиент не зарегестрирован ----*/
-    &--active{
-      display: block;
-    }
-  }
-
-  &__registration-link{
-    margin: 0 5px;
+  @media (max-width: $screen-sm) {
+    width: 20px;
+    height: 20px;
   }
 }
 
-.close{
+.close {
   &:after,
-  &:before{
+  &:before {
     @include pseudo;
     width: 100%;
     height: 3px;
     background-color: $color-gray-light;
   }
 
-  &:after{
+  &:after {
     transform: rotate(-45deg);
   }
-  &:before{
+
+  &:before {
     transform: rotate(45deg);
+  }
+}
+
+.modal-openstatus {
+  &__form {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  &__registration {
+    display: none;
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+    /*---- для текста что клиент не зарегестрирован ----*/
+    &--active {
+      display: block;
+    }
+  }
+
+  &__registration-link {
+    margin: 0 5px;
+  }
+
+  &--opened {
+    display: flex;
+  }
+}
+
+.modal-email {
+
+  &__form {
+    max-width: 100% !important;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  &--opened {
+    display: flex;
+  }
+}
+
+.modal-callback{
+  &__form {
+    margin-top: 40px;
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  &__label{
+    &:not(:first-of-type){
+      margin-top: 15px;
+    }
+  }
+
+  &__button-send{
+    margin-top: 20px;
+  }
+
+  &__subtitle{
+    text-align: center;
+    &:first-of-type {
+      margin-top: 35px !important;
+    }
+  }
+
+  &--opened {
+    display: flex;
+  }
+}
+
+.modal-accepted{
+
+  &__title{
+    margin-top: 40px;
+    color: $color-gray-light;
+  }
+
+  &__icon{
+    height: 80px;
+    @media (max-width: $screen-sm) {
+      height: 50px;
+    }
+  }
+  &--opened {
+    display: flex;
   }
 }
 
@@ -131,3 +226,4 @@
 .hidden {
   overflow: hidden;
 }
+
