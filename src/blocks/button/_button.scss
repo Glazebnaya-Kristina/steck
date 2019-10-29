@@ -38,6 +38,7 @@
 
   // цвета
   &--violet{
+    min-height: 50px;
     background-color: $color-violet;
     &:hover,
     &:focus{
@@ -60,9 +61,13 @@
   }
 
   &--fixet-active{
-    z-index: 10;
+    z-index: 5;
     opacity: 1;
     transform: translate(0, 0);
     transition: transform 0.5s ease 0s, opacity 0.3s ease 0.1s;
+  }
+
+  &--hidden{
+    display: none;
   }
 }
